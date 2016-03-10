@@ -25,6 +25,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -186,7 +187,6 @@
     <Content Include="Filemanager\index.html" />
     <Content Include="Filemanager\ReadMe.md" />
     <Content Include="Filemanager\scripts\filemanager.config.js" />
-    <Content Include="Filemanager\scripts\filemanager.config.js - Copy.default" />
     <Content Include="Filemanager\scripts\filemanager.js" />
     <Content Include="Filemanager\scripts\filemanager.liveSearch.js" />
     <Content Include="Filemanager\scripts\filemanager.liveSearch.min.js" />
@@ -321,6 +321,10 @@
     <Content Include="Images\tools.png" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Images\view.png" />
+    <Content Include="Images\vnpt_banner.png" />
+    <Content Include="Images\warning-icn.png" />
+    <Content Include="Images\yellowwarning_16px.gif" />
     <Content Include="NSurveyAdmin\AccessDenied.aspx" />
     <Content Include="NSurveyAdmin\AjaxWebMethodsProxy.aspx" />
     <Content Include="NSurveyAdmin\BarChartReport.aspx" />
@@ -490,6 +494,7 @@
     <Content Include="NSurveyAdmin\Images\arrow_up.gif" />
     <Content Include="NSurveyAdmin\Images\PDF-Icon_32.png" />
     <Content Include="NSurveyAdmin\Images\Print_32X32_Standard.png" />
+    <Content Include="NSurveyAdmin\Images\vnpt_banner.png" />
     <Content Include="NSurveyAdmin\Login.aspx" />
     <Content Include="NSurveyAdmin\SurveyIPSecurity.aspx" />
     <Content Include="NSurveyAdmin\CreateSurvey.aspx" />
@@ -509,7 +514,6 @@
     <Content Include="NSurveyAdmin\FileManager.aspx" />
     <Content Include="NSurveyAdmin\GlobalStats.aspx" />
     <Content Include="NSurveyAdmin\Help\index.aspx" />
-    <Content Include="NSurveyAdmin\Images\headerlogo.jpg" />
     <Content Include="NSurveyAdmin\Images\linebreak.gif" />
     <Content Include="NSurveyAdmin\Images\questiondownbutton.gif" />
     <Content Include="NSurveyAdmin\Images\questionoptionsbackground.gif" />
@@ -2170,6 +2174,12 @@
   <ItemGroup>
     <Content Include="Scripts\ckeditor\skins\kama\readme.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="NSurveyAdmin\Images\images_list.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Vnpt_Survey.pubxml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -2181,11 +2191,12 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>false</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>4976</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <!--<IISUrl>http://[yourwebserver]/[sp23dev]</IISUrl>-->
+          <IISUrl>
+          </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

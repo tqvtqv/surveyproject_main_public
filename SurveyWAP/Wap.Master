@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Survey&#8482; Project Webapplication</title>
+    <title>VNPT Survey</title>
     <meta id="MetaDescription" name="DESCRIPTION" content="Survey Project is a free and open source webapplication to create surveys, questionnaires or (data entry) forms for gathering and processing data online." />
     <meta id="MetaKeywords" name="KEYWORDS" content="survey project, survey, questionnaire, maker, tool, create, free, online, open source" />
     <meta id="MetaCopyright" name="COPYRIGHT" content="(c) 2011-2014 &lt;href='http://www.fryslanwebservices.com'>Fryslan Webservices TM&lt;/a>" />
@@ -105,8 +105,8 @@
 
             <asp:Panel id="logoPanel" runat="server"  CssClass="topCell logoPanel"> 
 
-                <a href="<%= Page.ResolveUrl("~")%>default.aspx" title="Survey&#8482; Project Homepage" target="_self">
-                 <asp:Image ID="spLogo" runat="server" ImageUrl="~/Images/SpLogo.png" AlternateText="SP Logo" />
+                <a href="<%= Page.ResolveUrl("~")%>default.aspx" title="Vnpt Survey Homepage" target="_self">
+                 <asp:Image ID="spLogo" runat="server" ImageUrl="~/Images/vnpt_banner.png" AlternateText="SP Logo" />
                 </a>
 
 
