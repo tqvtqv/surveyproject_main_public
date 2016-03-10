@@ -28,3 +28,17 @@ H:\SurveyProject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.BLL.xml
 H:\SurveyProject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.DAL.xml
 H:\SurveyProject\Reflector\Nsurvey_SQLServerDAL\obj\Release\Votations.NSurvey.SQLServerDAL.csprojResolveAssemblyReference.cache
 H:\SurveyProject\Reflector\Nsurvey_SQLServerDAL\obj\Release\Votations.NSurvey.SQLServerDAL.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.SQLServerDAL.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.SQLServerDAL.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.BE.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.BLL.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.DAL.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.BE.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.BLL.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Votations.NSurvey.DAL.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\obj\Release\Votations.NSurvey.SQLServerDAL.csprojResolveAssemblyReference.cache
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\obj\Release\Votations.NSurvey.SQLServerDAL.dll

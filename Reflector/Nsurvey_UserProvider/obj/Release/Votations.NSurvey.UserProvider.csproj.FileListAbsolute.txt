@@ -28,3 +28,13 @@ H:\SurveyProject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.DAL.xml
 H:\SurveyProject\Reflector\Nsurvey_UserProvider\obj\Release\Votations.NSurvey.UserProvider.csprojResolveAssemblyReference.cache
 H:\SurveyProject\Reflector\Nsurvey_UserProvider\obj\Release\Votations.NSurvey.UserProvider.dll
 H:\SurveyProject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.UserProvider.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.UserProvider.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.UserProvider.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.BE.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.BLL.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.DAL.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.BE.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.BLL.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\bin\Votations.NSurvey.DAL.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\obj\Release\Votations.NSurvey.UserProvider.csprojResolveAssemblyReference.cache
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\obj\Release\Votations.NSurvey.UserProvider.dll

@@ -1148,6 +1148,7 @@
     <Content Include="Scripts\Javascript\slider\slider.js" />
     <Content Include="Scripts\Javascript\tooltip\javascripts\jquery.tipsy.js" />
     <Content Include="Scripts\Javascript\tooltip\stylesheets\tipsy.css" />
+    <Content Include="Scripts\Javascript\ui\jquery-ui-1.10.4.js" />
     <Content Include="Scripts\Javascript\ui\jquery-ui-1.8.12.custom.min.js" />
     <Content Include="Scripts\Javascript\ui\jquery.ui.core.js" />
     <Content Include="Scripts\Javascript\ui\jquery.ui.mouse.js" />
@@ -1162,6 +1163,7 @@
     <Content Include="Scripts\js\jquery.ui.datepicker-de.js" />
     <Content Include="Scripts\js\jquery.ui.datepicker-nl-BE.js" />
     <Content Include="Scripts\js\jquery.ui.datepicker-nl.js" />
+    <Content Include="Scripts\js\jquery.ui.datepicker-vi.js" />
     <Content Include="Scripts\modernizr-2.7.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />

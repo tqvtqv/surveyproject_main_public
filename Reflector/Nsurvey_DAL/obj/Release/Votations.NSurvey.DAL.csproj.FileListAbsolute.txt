@@ -16,3 +16,9 @@ H:\SurveyProject\Reflector\Nsurvey_DAL\bin\Votations.NSurvey.BE.xml
 H:\SurveyProject\Reflector\Nsurvey_DAL\obj\Release\Votations.NSurvey.DAL.csprojResolveAssemblyReference.cache
 H:\SurveyProject\Reflector\Nsurvey_DAL\obj\Release\Votations.NSurvey.DAL.dll
 H:\SurveyProject\Reflector\Nsurvey_DAL\bin\Votations.NSurvey.DAL.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\bin\Votations.NSurvey.DAL.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\bin\Votations.NSurvey.DAL.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\bin\Votations.NSurvey.BE.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\bin\Votations.NSurvey.BE.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\obj\Release\Votations.NSurvey.DAL.csprojResolveAssemblyReference.cache
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\obj\Release\Votations.NSurvey.DAL.dll
