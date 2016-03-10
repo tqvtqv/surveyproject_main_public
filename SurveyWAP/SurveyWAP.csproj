@@ -322,7 +322,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Images\view.png" />
-    <Content Include="Images\vnpt_banner.png" />
+    <Content Include="Images\vnpt_logo.png" />
     <Content Include="Images\warning-icn.png" />
     <Content Include="Images\yellowwarning_16px.gif" />
     <Content Include="NSurveyAdmin\AccessDenied.aspx" />
@@ -494,7 +494,7 @@
     <Content Include="NSurveyAdmin\Images\arrow_up.gif" />
     <Content Include="NSurveyAdmin\Images\PDF-Icon_32.png" />
     <Content Include="NSurveyAdmin\Images\Print_32X32_Standard.png" />
-    <Content Include="NSurveyAdmin\Images\vnpt_banner.png" />
+    <Content Include="NSurveyAdmin\Images\vnpt_logo.png" />
     <Content Include="NSurveyAdmin\Login.aspx" />
     <Content Include="NSurveyAdmin\SurveyIPSecurity.aspx" />
     <Content Include="NSurveyAdmin\CreateSurvey.aspx" />

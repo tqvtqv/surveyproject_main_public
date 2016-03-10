@@ -106,7 +106,7 @@
             <asp:Panel id="logoPanel" runat="server"  CssClass="topCell logoPanel"> 
 
                 <a href="<%= Page.ResolveUrl("~")%>default.aspx" title="Vnpt Survey Homepage" target="_self">
-                 <asp:Image ID="spLogo" runat="server" ImageUrl="~/Images/vnpt_banner.png" AlternateText="SP Logo" />
+                 <asp:Image ID="spLogo" runat="server" ImageUrl="~/Images/vnpt_logo.png" AlternateText="SP Logo" />
                 </a>
 
 
