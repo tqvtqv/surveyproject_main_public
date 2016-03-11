@@ -32,7 +32,7 @@
 .IdLabel td{background:#e2e2e2;border:1px solid #e2e2e2;border-radius:5px;padding:2px 2px 2px 8px;-moz-border-radius:5px;-webkit-border-radius:5px}
 .innerText{font:400 12px/23px Arial,Verdana,sans-serif}
 .loginDiv{background:rgba(87,32,198,.5);border:0 solid #7c8fe3;border-radius:0 0 0 15px;color:#fff;font-size:11px;font-weight:700;height:29px;min-width:250px;padding:7px 15px 8px;position:relative;text-align:inherit;top:-16px;vertical-align:middle;width:auto;z-index:1000;-moz-border-radius:0 0 5px 5px;-webkit-border-radius:5px}
-.logoLogedInPanel{border:0;border-color:#fff;border-style:none;left:40px;padding:0 13px 2px 0;position:relative;text-align:left;top:30px}
+.logoLogedInPanel{border:0;border-color:#fff;border-style:none;left:4px;padding:0 3px 2px 0;position:relative;text-align:left;top:3px}
 .logoPanel{border:0;border-color:#fff;border-style:none;left:4px;padding:0 3px 2px 0;position:relative;text-align:left;top:2px}
 .logouthyperlink{background:#99f;border:0 solid #ddd;border-radius:0 0 15px;font-variant:small-caps;height:25px;left:-2px;padding:11px 9px 4px;position:relative;top:-15px;vertical-align:middle;white-space:nowrap;width:50px;-moz-border-radius:0 0 15px 0;-webkit-border-radius:0 0 15px 0}
 .maiStyle{background:#f4f9fa;font:10pt Arial}
