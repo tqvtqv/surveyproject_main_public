@@ -78,7 +78,7 @@
            top: 0px;  
            height: 120px; 
            width:1025px;
-            background-color: #4169E1; 	
+            background-color: #ffffff; 	
             border: 2px; 
             border-color: #ffffff;
             border-style: outset;
