@@ -20,6 +20,7 @@
 	Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 ************************************************************************************************/
+using DotNetCasClient;
 using System;
 using System.Web;
 using System.Web.Security;
@@ -57,11 +58,11 @@ namespace Votations.NSurvey.WebAdmin
 	
 		private void Page_Load(object sender, System.EventArgs e)
 		{
-
+            CasAuthentication.SingleSignOut();
             Session.Abandon();
             Response.Cookies.Clear();
 			FormsAuthentication.SignOut();
-			UINavigator.NavigateToLogin();
+            UINavigator.NavigateToLogin();
 		}
 
 

@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using Votations.NSurvey.Data;
+using Votations.NSurvey.DataAccess;
+using Votations.NSurvey.UserProvider;
+using Votations.NSurvey.WebAdmin;
 using Votations.NSurvey.WebAdmin.Code;
 
 
@@ -11,7 +15,7 @@ namespace SurveyWAP
 {
     public class Global : System.Web.HttpApplication
     {
-
+      
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
@@ -71,7 +75,53 @@ namespace SurveyWAP
         void Session_Start(object sender, EventArgs e)
         {
             // Code that runs when a new session is started
+            var user = HttpContext.Current.User;
+            if (user != null && user.Identity.IsAuthenticated)
+            {
+                int? id = new Users().GetUserByIdFromUserName(user.Identity.Name);
+                if ((id ?? 0) > 0)
+                {
+                    var sec = new LoginSecurity();
+                    var authUser = new Users().GetUserById(id ?? 0);
+                    UserSettingData userSettings = new Users().GetUserSettings(authUser.Users[0].UserId);
 
+                    if (userSettings.UserSettings.Rows.Count > 0)
+                    {
+                        System.Text.StringBuilder userInfos = new System.Text.StringBuilder();
+                        userInfos.Append(authUser.Users[0].UserName + ",");
+                        userInfos.Append(authUser.Users[0].UserId + ",");
+                        userInfos.Append(authUser.Users[0].FirstName + ",");
+                        userInfos.Append(authUser.Users[0].LastName + ",");
+                        userInfos.Append(authUser.Users[0].Email + ",");
+                        userInfos.Append(userSettings.UserSettings[0].IsAdmin + ",");
+                        userInfos.Append(userSettings.UserSettings[0].GlobalSurveyAccess);
+
+                        userInfos.Append("|");
+
+                        int[] userRights = new Users().GetUserSecurityRights(authUser.Users[0].UserId);
+                        for (int i = 0; i < userRights.Length; i++)
+                        {
+                            userInfos.Append(userRights[i].ToString());
+                            if (i + 1 < userRights.Length)
+                            {
+                                userInfos.Append(",");
+                            }
+
+                        }
+
+                        
+
+                        FormsAuthentication.SetAuthCookie(userInfos.ToString(), false);
+
+                        var x = UserFactory.Create().CreatePrincipal(userInfos.ToString());
+
+
+                                                //((PageBase)Page).SelectedFolderId = null;
+                        // ((Wap)this.Master).RebuildTree();
+                        UINavigator.NavigateToFirstAccess(x, -1);
+                    }
+                }
+            }
             // Session Variable to demo the working of the default answer option @@sessionvariablename@@
             HttpContext.Current.Session["SpDemoSessionVariable"] = "This Session Variable was set in Global.asax.cs";
 
