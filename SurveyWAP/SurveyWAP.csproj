@@ -53,6 +53,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Library\CKEditor.NET.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetCasClient, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetCasClient.1.0.2\lib\net20\DotNetCasClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Goldtect.ASTreeView">
       <HintPath>..\packages\ASTreeView.1.6.0.4\lib\net40\Goldtect.ASTreeView.dll</HintPath>
     </Reference>
@@ -63,6 +67,10 @@
     <Reference Include="itextsharp.xtra, Version=5.5.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\itextsharp.xtra.5.5.2\lib\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
