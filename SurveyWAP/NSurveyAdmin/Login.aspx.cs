@@ -21,16 +21,7 @@
 
 ************************************************************************************************/
 using System;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
-using System.Web.Security;
-using Votations.NSurvey.Data;
-using Votations.NSurvey.DataAccess;
-using Votations.NSurvey.BusinessRules;
 using Votations.NSurvey.UserProvider;
-using Votations.NSurvey.WebAdmin.Code;
 namespace Votations.NSurvey.WebAdmin
 {
     /// <summary>

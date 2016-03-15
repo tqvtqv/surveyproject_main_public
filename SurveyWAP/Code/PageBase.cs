@@ -28,20 +28,20 @@ namespace Votations.NSurvey.WebAdmin
 
     using Microsoft.VisualBasic;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
-    using System.Reflection;
+    using System.Security.Claims;
     using System.Text.RegularExpressions;
+    using System.Web;
     using System.Web.UI;
     using System.Web.UI.WebControls;
     using Votations.NSurvey.BusinessRules;
-    using Votations.NSurvey.DataAccess;
     using Votations.NSurvey.Data;
+    using Votations.NSurvey.DataAccess;
     using Votations.NSurvey.Resources;
     using Votations.NSurvey.UserProvider;
     using Votations.NSurvey.Web;
-    using Votations.NSurvey.WebAdmin.UserControls;
     using Votations.NSurvey.Web.Security;
-    using System.Collections.Generic;
 
     /// <summary>
     /// PageBase class description
@@ -65,11 +65,11 @@ namespace Votations.NSurvey.WebAdmin
                     // Creates new nsurvey context
                     // from the current user name
                     NSurveyContext.Current.User =
-                      UserFactory.Create().CreatePrincipal(User.Identity.Name);
+                      UserFactory.Create().CreatePrincipal((ClaimsIdentity)User.Identity);
                 }
             }
         }
-
+        
         /// <summary>
         /// Selected FolderId
         /// </summary>

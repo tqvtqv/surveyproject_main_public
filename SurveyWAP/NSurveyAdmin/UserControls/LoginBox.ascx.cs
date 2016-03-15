@@ -21,6 +21,7 @@
 
 ************************************************************************************************/
 using System;
+using System.Security.Claims;
 using System.Web.Security;
 using Votations.NSurvey.BusinessRules;
 using Votations.NSurvey.Data;
@@ -152,7 +153,7 @@ namespace Votations.NSurvey.WebAdmin.NSurveyAdmin.UserControls
 
                             FormsAuthentication.SetAuthCookie(userInfos.ToString(), false);
 
-                            var x = UserFactory.Create().CreatePrincipal(userInfos.ToString());
+                            var x = UserFactory.Create().CreatePrincipal(new ClaimsIdentity());
 
 
                             // ((Wap)this.Master).isTreeStale = true;
