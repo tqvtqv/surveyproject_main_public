@@ -2,13 +2,14 @@ namespace Votations.NSurvey.Web.Security
 {
     using System;
     using System.Collections;
+    using System.Security.Claims;
     using Votations.NSurvey.Data;
 
     /// <summary>
     /// NSurveyPrincipal to access and manage the web admin 
     /// section of nsurvey.
     /// </summary>
-    public class NSurveyFormPrincipal : INSurveyPrincipal
+    public class NSurveyFormPrincipal : ClaimsPrincipal, INSurveyPrincipal
     {
         private INSurveyIdentity _identity;
         private Hashtable _rights = new Hashtable();
@@ -22,7 +23,7 @@ namespace Votations.NSurvey.Web.Security
                 {
                     if (str.Length > 0)
                     {
-                        NSurveyRights key = (NSurveyRights) Enum.Parse(typeof(NSurveyRights), str);
+                        NSurveyRights key = (NSurveyRights)Enum.Parse(typeof(NSurveyRights), str);
                         this._rights.Add(key, key);
                     }
                 }
@@ -34,12 +35,9 @@ namespace Votations.NSurvey.Web.Security
             return this._rights.ContainsKey(right);
         }
 
-        public bool IsInRole(string role)
-        {
-            return true;
-        }
 
-        public INSurveyIdentity Identity
+
+        new public INSurveyIdentity Identity
         {
             get
             {

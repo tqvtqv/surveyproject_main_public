@@ -1,11 +1,11 @@
 namespace Votations.NSurvey.Web.Security
 {
     using System;
-
+    using System.Security.Claims;
     /// <summary>
     /// NSurveyIdentity abstraction of a nsurvey web administration's user
     /// </summary>
-    public class NSurveyFormIdentity : INSurveyIdentity
+    public class NSurveyFormIdentity : ClaimsIdentity, INSurveyIdentity
     {
         private string _email;
         private string _firstName;
@@ -20,7 +20,7 @@ namespace Votations.NSurvey.Web.Security
         private string _surveyCss;
         private string _surveyImg;
 
-        public NSurveyFormIdentity(string name, int userId, string firstName, string lastName, 
+        public NSurveyFormIdentity(string name, int userId, string firstName, string lastName,
             string email, bool isAdmin, bool hasAllSurveyAccess, bool isAuthenticated
         /*    string surveyHeaderText, string surveyFooterText, string surveyCss, string surveyImg*/
             )
@@ -32,8 +32,9 @@ namespace Votations.NSurvey.Web.Security
             this._email = email;
             this._isAdmin = isAdmin;
             this._hasAllSurveyAccess = hasAllSurveyAccess;
-            
+
             this._isAuthenticated = isAuthenticated;
+            
             /*
             this._surveyHeaderText= surveyHeaderText;
             this._surveyFooterText=surveyFooterText;
@@ -42,7 +43,7 @@ namespace Votations.NSurvey.Web.Security
              */
         }
 
-        public string AuthenticationType
+        public override string AuthenticationType
         {
             get
             {
@@ -82,7 +83,7 @@ namespace Votations.NSurvey.Web.Security
             }
         }
 
-        public bool IsAuthenticated
+        public override bool IsAuthenticated
         {
             get
             {
@@ -101,7 +102,7 @@ namespace Votations.NSurvey.Web.Security
         /// <summary>
         /// Login name 
         /// </summary>
-        public string Name
+        public override string Name
         {
             get
             {
@@ -121,10 +122,10 @@ namespace Votations.NSurvey.Web.Security
         }
         /* JJ Moved Survey Details into SurveyLayout table */
 
-        public string SurveyHeaderText{get{return _surveyHeaderText;}}
-        public string SurveyFooterText{get{return _surveyFooterText;}}
-        public string SurveyCss{get{return _surveyCss;}}
-        public string SurveyImg{get{return _surveyImg;}}
+        public string SurveyHeaderText { get { return _surveyHeaderText; } }
+        public string SurveyFooterText { get { return _surveyFooterText; } }
+        public string SurveyCss { get { return _surveyCss; } }
+        public string SurveyImg { get { return _surveyImg; } }
     }
 }
 

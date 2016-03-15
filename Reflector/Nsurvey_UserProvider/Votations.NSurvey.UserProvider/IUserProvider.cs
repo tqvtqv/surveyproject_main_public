@@ -1,6 +1,7 @@
 namespace Votations.NSurvey.UserProvider
 {
     using System;
+    using System.Security.Claims;
     using Votations.NSurvey.Data;
     using Votations.NSurvey.Web.Security;
 
@@ -10,7 +11,7 @@ namespace Votations.NSurvey.UserProvider
     /// </summary>
     public interface IUserProvider
     {
-        INSurveyPrincipal CreatePrincipal(string userName);
+        INSurveyPrincipal CreatePrincipal(ClaimsIdentity user);
         UserData GetAllUsersList();
     }
 }

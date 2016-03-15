@@ -1,22 +1,19 @@
 namespace Votations.NSurvey.Web.Security
 {
     using System;
-
+    using System.Security.Principal;
     /// <summary>
     /// NSurveyIdentity interface for those who need to create 
     /// a custom nsurvey identity type
     /// </summary>
-    public interface INSurveyIdentity
+    public interface INSurveyIdentity : IIdentity
     {
-        string AuthenticationType { get; }
+
 
         bool HasAllSurveyAccess { get; }
 
         bool IsAdmin { get; }
 
-        bool IsAuthenticated { get; }
-
-        string Name { get; }
 
         int UserId { get; }
 

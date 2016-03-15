@@ -3,6 +3,7 @@ namespace Votations.NSurvey.UserProvider
     using System;
     using System.Collections.Specialized;
     using System.Configuration;
+    using System.Security.Claims;
     using Votations.NSurvey.BusinessRules;
     using Votations.NSurvey.Data;
     using Votations.NSurvey.DataAccess;
@@ -22,28 +23,30 @@ namespace Votations.NSurvey.UserProvider
         /// <summary>
         /// Creates a new principal based on the provided username
         /// </summary>
-        public INSurveyPrincipal CreatePrincipal(string userName)
+        public INSurveyPrincipal CreatePrincipal(ClaimsIdentity identity)
         {
             if (this.SingleUserMode)
             {
                 return new NSurveyFormPrincipal(new NSurveyFormIdentity("nsurvey_admin", 0, null, null, null, true, true, false), null);
             }
-            if ((userName == null) || (userName.Length == 0))
+            
+            if (identity == null)
             {
                 return new NSurveyFormPrincipal(new NSurveyFormIdentity("anonymous", -1, null, null, null, false, false, false), null);
             }
-            int index = userName.IndexOf("|");
-            if (index < 0)
+            var userData = identity.FindFirst(Votations.NSurvey.Constants.Constants.MyCustomClaimType);
+            int index = (userData != null) ? userData.Value.IndexOf("|") : -1;
+            if (index < 0 )
             {
                 return new NSurveyFormPrincipal(new NSurveyFormIdentity("anonymous", -1, null, null, null, false, false, false), null);
             }
-            string[] strArray = userName.Substring(0, index).Split(new char[] { ',' });
+            string[] strArray = userData.Value.Substring(0, index).Split(new char[] { ',' });
             if (strArray.Length < 6)
             {
                 return new NSurveyFormPrincipal(new NSurveyFormIdentity("anonymous", -1, null, null, null, false, false, false), null);
             }
             return new NSurveyFormPrincipal(new NSurveyFormIdentity(strArray[0], int.Parse(strArray[1]), strArray[2], strArray[3], strArray[4],
-                bool.Parse(strArray[5]), bool.Parse(strArray[6]), true), userName.Substring(index + 1).Split(new char[] { ',' }));
+                bool.Parse(strArray[5]), bool.Parse(strArray[6]), true), userData.Value.Substring(index + 1).Split(new char[] { ',' }));
         }
 
         public void DeleteUserById(int userId)
