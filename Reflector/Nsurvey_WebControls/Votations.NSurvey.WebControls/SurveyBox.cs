@@ -1534,7 +1534,7 @@ namespace Votations.NSurvey.WebControls
             }
             if ((this._redirectionURL != null) && (this._redirectionURL.Length != 0))
             {
-                this.Context.Response.Redirect(this._redirectionURL);
+                this.Context.Response.Redirect(string.Format("{0}?{1}={2}&voterid={3}", this._redirectionURL, Votations.NSurvey.Constants.Constants.QRYSTRGuid, this.SurveyId, this.VoterAnswers.Voters[0].VoterId));
             }
             else
             {

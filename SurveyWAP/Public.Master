@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Public.master.cs" Inherits="Votations.NSurvey.WebAdmin.Public" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>VNPT Survey</title>
+    <meta id="MetaDescription" name="DESCRIPTION" content="Survey Project is a free and open source webapplication to create surveys, questionnaires or (data entry) forms for gathering and processing data online." />
+    <meta id="MetaKeywords" name="KEYWORDS" content="survey project, survey, questionnaire, maker, tool, create, free, online, open source" />
+    <meta id="MetaCopyright" name="COPYRIGHT" content="(c) 2011-2014 &lt;href='http://www.fryslanwebservices.com'>Fryslan Webservices TM&lt;/a>" />
+    <meta id="MetaGenerator" name="GENERATOR" content="SurveyTM Project" />
+    <meta id="MetaAuthor" name="AUTHOR" content="Fryslan Webservices TM" />
+    <meta name="RESOURCE-TYPE" content="DOCUMENT" />
+    <meta name="DISTRIBUTION" content="GLOBAL" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <meta name="REVISIT-AFTER" content="1 DAYS" />
+    <meta name="RATING" content="GENERAL" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+
+  
+    <link href="~/nsurveyadmin/css/nsurveyadmin.css" type="text/css" rel="stylesheet" />
+    <link href="~/nsurveyadmin/css/perfect-scrollbar.css" type="text/css" rel="stylesheet" />
+    <!-- All CSS for Survey 2.0 version is in survey20.css -->
+
+
+    <!--[if lte IE 7]>
+        <style type="text/css">
+            html .jquerycssmenu{height: 1%;} /*Holly Hack for IE7 and below*/
+        </style>
+    <![endif]-->
+
+    <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
+
+    <script type="text/javascript">
+        var MenuArrowImages = { down: ['downarrowclass', '../Images/arrow-down.gif', 25], right: ['rightarrowclass', '../Images/arrow-right.gif'] };
+    </script>
+
+    <script type="text/javascript">
+
+        function noContextMenu() {
+            return false;
+        }
+        //document.onMouseDown = customRightMenu(event);
+
+        // block the Right Menu mouse option: 
+        
+        document.oncontextmenu = function () {
+
+            return false;
+            
+        }        
+        
+    </script>
+
+</head>
+<body>
+
+<!-- Tooltip Tipsy Jquery script -->
+      <script type="text/javascript">
+          $(function () {
+              $('#tooltip [title]').tipsy({ trigger: 'focus', gravity: 'w' });
+          });
+  </script>
+
+
+    <div id="container" style="overflow:auto; text-align: center; width:100%">
+        
+
+        <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    </div>
+</body>
+
+</html>

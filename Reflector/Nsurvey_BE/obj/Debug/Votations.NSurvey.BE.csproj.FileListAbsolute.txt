@@ -22,3 +22,9 @@ D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_BE\bin\De
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_BE\obj\Debug\Votations.NSurvey.BE.dll
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_BE\obj\Debug\Votations.NSurvey.BE.pdb
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_BE\obj\Debug\Votations.NSurvey.BE.csprojResolveAssemblyReference.cache
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_BE\bin\Debug\Votations.NSurvey.BE.dll.config
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_BE\bin\Debug\Votations.NSurvey.BE.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_BE\bin\Debug\Votations.NSurvey.BE.pdb
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_BE\obj\Debug\Votations.NSurvey.BE.csprojResolveAssemblyReference.cache
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_BE\obj\Debug\Votations.NSurvey.BE.dll
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_BE\obj\Debug\Votations.NSurvey.BE.pdb

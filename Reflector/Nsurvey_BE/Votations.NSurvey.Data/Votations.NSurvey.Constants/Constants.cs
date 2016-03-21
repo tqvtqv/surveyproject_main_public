@@ -13,6 +13,7 @@ namespace Votations.NSurvey.Constants
         public const string PreviewPage = "CampaignStart.aspx";
         public const string ScrollQuestionQstr = "ScrollQuestionId";
         public const string QRYSTRGuid = "surveyid";
+        public const string MyCustomClaimType = "MyCustomClaimType";
         public static string GetFilePathCSS(int surveyId)
         {
 
