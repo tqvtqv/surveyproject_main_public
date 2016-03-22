@@ -507,6 +507,7 @@
     <Content Include="NSurveyAdmin\Images\Print_32X32_Standard.png" />
     <Content Include="NSurveyAdmin\Images\vnpt_logo.png" />
     <Content Include="NSurveyAdmin\Login.aspx" />
+    <Content Include="NSurveyAdmin\SurveyADGroupSecurity.aspx" />
     <Content Include="NSurveyAdmin\SurveyIPSecurity.aspx" />
     <Content Include="NSurveyAdmin\CreateSurvey.aspx" />
     <Content Include="NSurveyAdmin\CSS\jquerycssmenu.css" />
@@ -1396,6 +1397,13 @@
     <Compile Include="NSurveyAdmin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NSurveyAdmin\SurveyADGroupSecurity.aspx.cs">
+      <DependentUpon>SurveyADGroupSecurity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSurveyAdmin\SurveyADGroupSecurity.aspx.designer.cs">
+      <DependentUpon>SurveyADGroupSecurity.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NSurveyAdmin\SurveyIPSecurity.aspx.cs">
       <DependentUpon>SurveyIPSecurity.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2212,6 +2220,12 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\Vnpt_Survey.pubxml" />
     <Content Include="Public.Master" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

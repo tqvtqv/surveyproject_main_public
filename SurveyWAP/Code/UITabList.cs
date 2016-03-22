@@ -138,13 +138,14 @@ namespace Votations.NSurvey.WebAdmin
         }
 
 
-        public enum SecurityTabs { Form = 0, Token = 1, IPRange=2}
+        public enum SecurityTabs { Form = 0, Token = 1, IPRange = 2, ADGroup = 3 }
         public static void SetSecurityTabs(MsterPageTabs masterPage, SecurityTabs selectedTab)
         {
             masterPage.DisplayTabs.Clear();
             masterPage.DisplayTabs.Add("Form Security", UINavigator.SurveySecurityLink);
             masterPage.DisplayTabs.Add("Token Security", UINavigator.SurveyTokenSecurityLink);
             masterPage.DisplayTabs.Add(ResourceManager.GetString("IPRangeFormTitle"), UINavigator.SurveyIPSecurityLink);
+            masterPage.DisplayTabs.Add("AD Group Security", UINavigator.SurveyADGroupSecurity);
             masterPage.selectedTabIndex = (int)selectedTab;
         }
 

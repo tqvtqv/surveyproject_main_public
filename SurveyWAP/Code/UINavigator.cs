@@ -50,6 +50,7 @@ namespace Votations.NSurvey.WebAdmin
         public static readonly string SurveySecurityLink = AdminRoot + "/surveysecurity.aspx";
         public static readonly string SurveyTokenSecurityLink = AdminRoot + "/SurveyTokenSecurity.aspx";
         public static readonly string SurveyIPSecurityLink = AdminRoot + "/SurveyIPSecurity.aspx";
+        public static readonly string SurveyADGroupSecurity = AdminRoot + "/SurveyADGroupSecurity.aspx";
         public static readonly string SurveyContentBuilderLink = AdminRoot + "/surveycontentbuilder.aspx";
         public static readonly string QuestionGroupsLink = AdminRoot + "/QuestionGroups.aspx";
         public static readonly string InsertQuestionLink = AdminRoot + "/InsertQuestion.aspx";

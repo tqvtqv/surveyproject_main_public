@@ -26,6 +26,7 @@ namespace Votations.NSurvey.WebControls
     [ToolboxData("<{0}:SurveyBox runat=server></{0}:SurveyBox>"), ToolboxBitmap(typeof(Bitmap), "SurveyBox.bmp"), Designer(typeof(SurveyBoxDesigner))]
     public class SurveyBox : WebControl, INamingContainer
     {
+        #region events and variables
         private Style _answerStyle;
         private Style _buttonStyle;
         private string _buttonText = null;
@@ -156,7 +157,7 @@ namespace Votations.NSurvey.WebControls
         /// values after they have been created
         /// </summary>
         public event FormEventHandler VoterDataCreated;
-
+        #endregion
         /// <summary>
         /// Web control constructor
         /// </summary>
