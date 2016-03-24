@@ -2,12 +2,15 @@ namespace Votations.NSurvey.BusinessRules
 {
     using Microsoft.VisualBasic;
     using System;
+    using System.Collections;
+    using System.Collections.Generic;
     using System.Data;
     using System.Text;
     using Votations.NSurvey.DALFactory;
     using Votations.NSurvey.Data;
     using Votations.NSurvey.DataAccess;
     using Votations.NSurvey.IDAL;
+    
 
     /// <summary>
     /// Contains the business rules that are used for a survey
@@ -123,6 +126,11 @@ namespace Votations.NSurvey.BusinessRules
             return filterString;
         }
 
+        public void AddADGroupMultiple( IEnumerable<SurveyADGroupDetail> enumerable)
+        {
+            SurveyFactory.Create().AddADGroupMultiple(enumerable);
+        }
+
         /// <summary>
         /// Get next page depending depending on the
         /// branching rules
@@ -201,7 +209,7 @@ namespace Votations.NSurvey.BusinessRules
                 {
                     rowArray = null;
                 }
-            Label_0319:
+                Label_0319:
                 if ((((rowArray != null) && (row.ConditionalOperator == 1)) && (rowArray.Length > 0)) || ((row.ConditionalOperator == 2) && (rowArray.Length == 0)))
                 {
                     return row.TargetPageNumber;
@@ -345,7 +353,7 @@ namespace Votations.NSurvey.BusinessRules
                     {
                         rowArray = null;
                     }
-                Label_03F9:
+                    Label_03F9:
                     if ((((rowArray != null) && (row.ConditionalOperator == 1)) && (rowArray.Length > 0)) || ((row.ConditionalOperator == 2) && (rowArray.Length == 0)))
                     {
                         thankYouMessage = row.ThankYouMessage;
@@ -359,7 +367,12 @@ namespace Votations.NSurvey.BusinessRules
             }
             return null;
         }
-
+        public DataSet GetAllAdGroupDetails(int surveyId) {
+            return SurveyFactory.Create().GetAllAdGroupDetails(surveyId);
+        }
+        public void DeleteAdGroupDetails(IEnumerable<int> deleteCandidates) {
+            SurveyFactory.Create().DeleteAdGroupDetails(deleteCandidates);
+        }
         /// <summary>
         /// Import the given surveys into the DB
         /// </summary>
@@ -526,6 +539,16 @@ namespace Votations.NSurvey.BusinessRules
         }
 
         /// <summary>
+        /// Updates asp.net settings
+        /// </summary>
+        /// <param name="surveyId"></param>
+        /// <param name="allowMultipleSubmissions"></param>
+        public void UpdateADGroupSecuritySetting(int surveyId, bool isAllowAccess)
+        {
+            SurveyFactory.Create().UpdateADGroupSecuritySetting(surveyId, isAllowAccess);
+        }
+
+        /// <summary>
         /// Update the cookie expiration time
         /// </summary>
         /// <param name="surveyId"></param>
@@ -611,6 +634,8 @@ namespace Votations.NSurvey.BusinessRules
         {
             SurveyFactory.Create().UpdateUnAuthentifiedUserActions(surveyId, UnAuthentifiedUserActionId);
         }
+
+
     }
 }
 

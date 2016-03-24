@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Votations.NSurvey.Data;
+using Votation.NSurvey.LDAPProvider;
 using Votations.NSurvey.BusinessRules;
-using System.Data;
+using Votations.NSurvey.Data;
+
 namespace Votations.NSurvey.WebAdmin.NSurveyAdmin
 {
     public partial class SurveyADGroupSecurity : PageBase
@@ -27,57 +28,35 @@ namespace Votations.NSurvey.WebAdmin.NSurveyAdmin
 
         private void LocalizePage()
         {
-            literalIPRangeStart.Text=GetPageResource("IPRangeStartTitle");
-            literalIPRangeEnd.Text = GetPageResource("IPRangeEndTitle");
-            literalIPRangesTitle.Text = GetPageResource("IPRangeFormTitle");
-            lbAddNew.Text = GetPageResource("AddNew");
+            literalADGroupTitle.Text= GetPageResource("ADGroupSecurity");
+            btnDeleteSelected.Text = GetPageResource("Delete");
+            btnAddADGroup.Text = GetPageResource("Add");
+            
         }
         protected void BindFields()
         {
-            SurveyIPRangeData data = new SurveyIPRange().GetAllSurveyIPranges(((PageBase)Page).SurveyId);
+            DataSet data = new Survey().GetAllAdGroupDetails(((PageBase)Page).SurveyId);
             DataView dv1 = data.DefaultViewManager.CreateDataView(data.Tables[0]);
-          
+
 
             // when no results found we add new empty row and clear it cells
             if (dv1.Count == 0)
-            {
                 dv1.AddNew();
-                gvIPRanges.DataSource = dv1;
 
-                gvIPRanges.DataBind();
-                foreach (TableCell cell in gvIPRanges.Rows[0].Cells)
-                {
-                    cell.Controls.Clear();
-                    cell.Controls.Add(new Literal());
-                }
-                gvIPRanges.Rows[0].Visible = false;
-            }
-            else
-            {
-                gvIPRanges.DataSource = data.SurveyIPRange.Rows;
+            lvADGroups.DataSource = dv1;
 
-                gvIPRanges.DataBind();
-            }
+            lvADGroups.DataBind();
+
 
         }
-        protected string GetIPSection(object IPAddressObj, int sectionNumber)
-        {
-            if (IPAddressObj == null) return "";
-            string IPAddress = IPAddressObj as string;
-          return  IPAddress==null?"":IPAddress.Split('.')[sectionNumber];
-        }
+        
         private void SetupSecurity()
         {
             CheckRight(Data.NSurveyRights.TokenSecurityRight, true);
         }
 
 
-        protected void lbAddNew_Click(object sender, EventArgs e)
-        {
-            gvIPRanges.ShowFooter = true;
-            BindFields();
-
-        }
+        
 
         private void InsertUpdateIPRange(bool isInsert,int? surveyIPRangeId,int surveyId, string IPStart, string IPEnd)
         {
@@ -114,33 +93,47 @@ namespace Votations.NSurvey.WebAdmin.NSurveyAdmin
         {
             string startIp = assembleIpString("txtIpStart", row);
             string endIp = assembleIpString("txtIpEnd", row);
-            int surveyIPRangeID = Convert.ToInt32(gvIPRanges.DataKeys[row.RowIndex].Value.ToString());
+            int surveyIPRangeID = Convert.ToInt32(lvADGroups.DataKeys[row.RowIndex].Value.ToString());
             InsertUpdateIPRange(false,surveyIPRangeID,((PageBase)Page).SurveyId, startIp, endIp);
         }
         private void DeleteIPRange(GridViewRow row)
         {
-            int surveyIPRangeID = Convert.ToInt32(gvIPRanges.DataKeys[row.RowIndex].Value.ToString());
+            int surveyIPRangeID = Convert.ToInt32(lvADGroups.DataKeys[row.RowIndex].Value.ToString());
             new SurveyIPRange().DeleteSurveyIPRangeById(surveyIPRangeID);
         }
-        protected void OnCommand(object sender, CommandEventArgs e)
+
+
+        protected void btnAddADGroup_Click(object sender, EventArgs e)
         {
-            GridViewRow row = ((GridViewRow)((LinkButton)sender).Parent.Parent);
-            int rowIndex = row.RowIndex;
-            if (rowIndex >= 0)
+            var ou = txtAdGroupName.Text.Trim();
+            var ldapHelper = LDAPFactory.Create();
+            var results = ldapHelper.SearchOU(ou);
+            if (results.Count() > 0)
             {
-                 gvIPRanges.Rows[rowIndex].RowState = DataControlRowState.Normal;
+                var list = results.Select(x => new SurveyADGroupDetail { });
+                new Survey().AddADGroupMultiple(results.Select(x => new SurveyADGroupDetail
+                {
+                    AddInId = this.SurveyId,
+                    SurveyId = this.SurveyId,
+                    FilterPhase = x,
+                    GroupName = ldapHelper.GetFirstPath(x, false)
+                }));
             }
-            switch (e.CommandName)
-            {
-                case "DoEdit": gvIPRanges.EditIndex = row.RowIndex; BindFields(); break;
-                case "CancelEdit": gvIPRanges.EditIndex = -1; BindFields() ; break;
-                case "CancelInsert": gvIPRanges.ShowFooter = false;  BindFields(); break;
-                case "InsertOK": InsertIPRange(row); gvIPRanges.ShowFooter = false; BindFields(); break;
-                case "EditOK": UpdateIPRange(row); gvIPRanges.EditIndex = -1; BindFields(); break;
-                case "DoDelete": DeleteIPRange(row); gvIPRanges.EditIndex = -1; BindFields(); break;
-            }
-
+            else ShowErrorMessage(MessageLabel, "Không tìm thấy đơn vị trong LDAP");
         }
+        protected void btnDeleteSelected_Click(object sender, EventArgs e)
+        {
+            List<int> deleteCandidates = new List<int>();
 
+            foreach (var row in lvADGroups.Items)
+                if (((CheckBox)row.FindControl("chkDelete")).Checked)
+                    deleteCandidates.Add(Convert.ToInt32(((Literal)row.FindControl("ltADGroupId")).Text));
+
+            if (deleteCandidates.Count > 0)
+            {
+                //new Survey().DeleteSurveyTokensByIdMultiple(deleteCandidates);
+                BindFields();
+            }
+        }
     }
 }

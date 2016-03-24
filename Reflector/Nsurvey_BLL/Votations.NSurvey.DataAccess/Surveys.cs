@@ -18,6 +18,10 @@ namespace Votations.NSurvey.DataAccess
         {
             return SurveyFactory.Create().AspSecurityAllowsMultipleSubmissions(surveyId);
         }
+        public bool AspADGroupAllowsAccess(int surveyId)
+        {
+            return SurveyFactory.Create().AspADGroupAllowsAccess(surveyId);
+        }
 
         /// <summary>
         /// Return a survey object that reflects the current activated poll. 

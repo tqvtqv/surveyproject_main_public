@@ -28,7 +28,7 @@ namespace Votations.NSurvey.SQLServerDAL
     using Microsoft.Practices.EnterpriseLibrary.Common;
     using Microsoft.Practices.EnterpriseLibrary.Data;
     using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
-
+    using Microsoft.SqlServer.Server;
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -1164,6 +1164,19 @@ namespace Votations.NSurvey.SQLServerDAL
                 return Convert.ToBoolean(scalarValue);
             }
         }
+        public bool AspADGroupAllowsAccess(int surveyId)
+        {
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyAspADGroupAllowsAccess", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            if (scalarValue == null || scalarValue == DBNull.Value)
+            {
+                return false;
+            }
+            else
+            {
+                return Convert.ToInt32(scalarValue) > 0;
+            }
+        }
+
 
         /// <summary>
         ///	Check if the survey allows multiple submission
@@ -1171,7 +1184,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public bool AspSecurityAllowsMultipleSubmissions(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyAllowMultipleASPNetVotes", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyAllowMultipleASPNetVotes", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return false;
@@ -1181,7 +1194,16 @@ namespace Votations.NSurvey.SQLServerDAL
                 return Convert.ToBoolean(scalarValue);
             }
         }
+        public void UpdateADGroupSecuritySetting(int surveyId, bool isAllowAccess)
+        {
+            ArrayList sqlParams = new ArrayList();
+            {
+                sqlParams.Add(new SqlParameter("@SurveyId", surveyId).SqlValue);
+                sqlParams.Add(new SqlParameter("@IsAllowAccess", isAllowAccess).SqlValue);
+            }
 
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyUpdateADGroupSecurity", sqlParams.ToArray());
+        }
         /// <summary>
         /// Update the security settings
         /// </summary>
@@ -1469,6 +1491,53 @@ namespace Votations.NSurvey.SQLServerDAL
             }
 
             DbConnection.db.ExecuteNonQuery("vts_spSurveyUpdateFriendlyName", sqlParams.ToArray());
+        }
+
+        public DataSet GetAllAdGroupDetails(int surveyId)
+        {
+            DataSet adGroups = new DataSet();
+            DbConnection.db.LoadDataSet("vts_spSurveyADGroupGetDetails", adGroups, new string[] { "ADGroups" }, new SqlParameter("@SurveyId", surveyId).SqlValue);
+            return adGroups;
+        }
+
+        public void DeleteAdGroupDetails(IEnumerable<int> ids)
+        {
+            SqlMetaData[] tab = { new SqlMetaData("value", SqlDbType.Int) };
+            List<SqlDataRecord> idList =
+            ids.Select(x => { var y = new SqlDataRecord(tab); y.SetInt32(0, x); return y; }).ToList<SqlDataRecord>();
+
+            SqlParameter p = new SqlParameter("@tblIdList", SqlDbType.Structured);
+            p.Direction = ParameterDirection.Input;
+            p.TypeName = "dbo.IntTableType";
+            p.Value = idList;
+
+            SqlCommand cmd = new SqlCommand();
+            using (SqlConnection conn = new SqlConnection(DbConnection.NewDbConnectionString))
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "vts_spSurveyADGroupDeleteMultiple";
+                cmd.Parameters.Add(p);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void AddADGroupMultiple(IEnumerable<SurveyADGroupDetail> details)
+        {
+            foreach (var item in details)
+            {
+                ArrayList sqlParams = new ArrayList();
+                {
+                    
+                    sqlParams.Add(new SqlParameter("@SurveyId", item.SurveyId).SqlValue);
+                    sqlParams.Add(new SqlParameter("@GroupName", item.GroupName).SqlValue);
+                    sqlParams.Add(new SqlParameter("@FilterPhase", item.FilterPhase).SqlValue);
+                    
+                }
+
+                DbConnection.db.ExecuteNonQuery("vts_spSurveyAddAdGroupDetail", sqlParams.ToArray());
+            }
         }
     }
 }

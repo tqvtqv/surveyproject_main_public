@@ -68,6 +68,8 @@ namespace Votations.NSurvey.WebAdmin
         public static readonly string ExportData = AdminRoot + "/ExportData.aspx";
         public static readonly string MailingStatus = AdminRoot + "/MailingStatus.aspx";
         public static readonly string ResultsReportHyperlink = AdminRoot + "/ResultsReporting.aspx";
+        public static readonly string VNPTGroupReportHyperlink = AdminRoot + "/VNPTGroupReport.aspx";
+        public static readonly string VNPTItemReportHyperlink = AdminRoot + "/VNPTItemReport.aspx";
         public static readonly string FieldsReportHyperlink = AdminRoot + "/FieldReporting.aspx";
         public static readonly string ASPNETCode = AdminRoot + "/Controlcode.aspx";
         public static readonly string InsertSecurityAddInLink = AdminRoot + "/InsertSecurityAddIn.aspx";

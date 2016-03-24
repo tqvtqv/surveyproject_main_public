@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Web
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votations.NSurvey.SQLServerDAL", "Reflector\Nsurvey_SQLServerDAL\Votations.NSurvey.SQLServerDAL.csproj", "{3050518F-8D14-4704-8092-1650B183E266}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votations.NSurvey.UserProvider", "Reflector\Nsurvey_UserProvider\Votations.NSurvey.UserProvider.csproj", "{94EB9C0F-FB57-41A8-8175-F1E255912374}"
@@ -16,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votations.NSurvey.DAL", "Reflector\Nsurvey_DAL\Votations.NSurvey.DAL.csproj", "{17D2197C-324F-48A6-895D-075FAF4A942E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votations.NSurvey.EMailing", "Reflector\Nsurvey_Emailing\Votations.NSurvey.EMailing.csproj", "{7D02ED0F-6C2F-4550-B203-CA03D190A5E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADBrowser5", "ADBrowser5\ADBrowser5.csproj", "{58327FFF-D74C-4AC8-A7F7-56110F1A4897}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,10 @@ Global
 		{7D02ED0F-6C2F-4550-B203-CA03D190A5E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D02ED0F-6C2F-4550-B203-CA03D190A5E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D02ED0F-6C2F-4550-B203-CA03D190A5E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58327FFF-D74C-4AC8-A7F7-56110F1A4897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58327FFF-D74C-4AC8-A7F7-56110F1A4897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58327FFF-D74C-4AC8-A7F7-56110F1A4897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58327FFF-D74C-4AC8-A7F7-56110F1A4897}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

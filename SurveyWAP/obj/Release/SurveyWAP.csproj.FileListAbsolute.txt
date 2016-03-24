@@ -365,3 +365,4 @@ D:\Work\Projects\surveyproject\SurveyWAP\bin\DotNetCasClient.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\log4net.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\DotNetCasClient.xml
 D:\Work\Projects\surveyproject\SurveyWAP\bin\log4net.xml
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Release\Votations.NSurvey.WebAdmin.VoteSumary.resources

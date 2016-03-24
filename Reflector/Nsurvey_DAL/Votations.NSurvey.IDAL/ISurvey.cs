@@ -1,6 +1,8 @@
 namespace Votations.NSurvey.IDAL
 {
     using System;
+    using System.Collections.Generic;
+    using System.Data;
     using Votations.NSurvey.Data;
 
     /// <summary>
@@ -12,6 +14,7 @@ namespace Votations.NSurvey.IDAL
         void AddMessageCondition(MessageConditionData newMessageCondition);
         void AddSurvey(SurveyData newSurvey);
         bool AspSecurityAllowsMultipleSubmissions(int surveyId);
+        bool AspADGroupAllowsAccess(int surveyId);
         void AssignUserToSurvey(int surveyId, int userId);
         bool CheckSurveyUser(int surveyId, int userId);
         SurveyData CloneSurvey(int surveyId);
@@ -48,6 +51,7 @@ namespace Votations.NSurvey.IDAL
         ResumeModeData GetSurveyResumeModes();
         int GetSurveyUnAuthentifiedUserAction(int surveyId);
         SurveyData GetUnAssignedSurveysList(int userId);
+        DataSet GetAllAdGroupDetails(int surveyId);
         bool HasPageBranching(int surveyId, int pageNumber);
         void ImportSurveys(NSurveyForm importSurveys, int userId,int folderId);
         void IncreaseQuotaEntries(int surveyId);
@@ -68,6 +72,7 @@ namespace Votations.NSurvey.IDAL
         void UnAssignUserFromSurvey(int surveyId, int userId);
         void UpdateAccessPassword(int surveyId, string accessPassword);
         void UpdateAspSecuritySettings(int surveyId, bool allowMultipleSubmissions);
+        void UpdateADGroupSecuritySetting(int surveyId, bool isAllowAccess);
         void UpdateCookieExpiration(int surveyId, int cookieExpires);
         void UpdateIPExpiration(int surveyId, int ipExpires);
         void UpdateMessageCondition(MessageConditionData updatedMessageCondition);
@@ -81,9 +86,9 @@ namespace Votations.NSurvey.IDAL
 
         void SetFolderId(int? folderId, int surveyId);
         SurveyData GetAllSurveysByTitle(string title, int? folderID,int userID);
-
+        void AddADGroupMultiple(IEnumerable<SurveyADGroupDetail> enumerable);
         void SetFriendlyName(int surveyId, string friendlyName);
-   
+        void DeleteAdGroupDetails(IEnumerable<int> deleteCandidates);
     }
 }
 

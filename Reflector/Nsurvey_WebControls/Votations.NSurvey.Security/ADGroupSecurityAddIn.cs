@@ -1,15 +1,14 @@
-namespace Votations.NSurvey.Security
+﻿namespace Votations.NSurvey.Security
 {
     using System;
     using System.Collections.Specialized;
-    using System.Runtime.CompilerServices;
     using System.Web;
     using System.Web.UI;
     using System.Web.UI.WebControls;
+    using Votation.NSurvey.LDAPProvider;
     using Votations.NSurvey.BusinessRules;
     using Votations.NSurvey.Data;
     using Votations.NSurvey.DataAccess;
-    using Votations.NSurvey.Resources;
 
     /// <summary>
     /// Add in that handles the LDAP security
@@ -53,16 +52,18 @@ namespace Votations.NSurvey.Security
             TableCell cell = new TableCell();
             TableRow row = new TableRow();
             cell.ColumnSpan = 2;
-            cell.Text = ResourceManager.GetString("ASPNETSecurityAddinDescription", this.LanguageCode);
+            //cell.Text = ResourceManager.GetString("ASPNETSecurityAddinDescription", this.LanguageCode);
+            cell.Text = "AD Group Security Add In";
             row.Cells.Add(cell);
             this._adminTable.Rows.Add(row);
             cell = new TableCell();
             row = new TableRow();
             CheckBox child = new CheckBox();
-            child.Checked = new Surveys().AspSecurityAllowsMultipleSubmissions(this.SurveyId);
+            child.Checked = new Surveys().AspADGroupAllowsAccess(this.SurveyId);
             Label label = new Label();
             label.ControlStyle.Font.Bold = true;
-            label.Text = ResourceManager.GetString("MultipleSubmissionsLabel", this.LanguageCode);
+            //label.Text = ResourceManager.GetString("MultipleSubmissionsLabel", this.LanguageCode);
+            label.Text = "Các đơn vị được truy cập khảo sát"; ;
             cell.Width = Unit.Percentage(50);
             cell.Controls.Add(label);
             row.Cells.Add(cell);
@@ -114,7 +115,7 @@ namespace Votations.NSurvey.Security
 
         protected virtual void OnCheckBoxChange(object sender, EventArgs e)
         {
-            new Survey().UpdateAspSecuritySettings(this.SurveyId, ((CheckBox) sender).Checked);
+            new Survey().UpdateADGroupSecuritySetting(this.SurveyId, ((CheckBox) sender).Checked);
         }
 
         /// <summary>
@@ -124,7 +125,10 @@ namespace Votations.NSurvey.Security
         public void ProcessVoterData(VoterAnswersData voter)
         {
             voter.Voters[0].ContextUserName = HttpContext.Current.User.Identity.Name;
-            new Voter().UpdateVoterUserName(voter.Voters[0].VoterId, HttpContext.Current.User.Identity.Name);
+            new Voter().UpdateVoterADInfo(this.SurveyId, voter.Voters[0].VoterId,
+                LDAPFactory.Create().GetVoterInfo(HttpContext.Current.User.Identity.Name)
+                );
+            
         }
 
         /// <summary>

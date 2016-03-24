@@ -1,5 +1,6 @@
 namespace Votations.NSurvey.IDAL
 {
+    using BE.Votations.NSurvey.Data;
     using System;
     using System.Data;
     using System.Runtime.InteropServices;
@@ -43,6 +44,7 @@ namespace Votations.NSurvey.IDAL
         void SetVoterUId(int voterId, string uId);
         void UpdateVoter(VoterAnswersData voterAnswers);
         void UpdateVoterUserName(int voterId, string userName);
+        void UpdateVoterADInfo(int surveyId, int voterId, VoterADInfo user);
         void ImportVoter(int SurveyId,NSurveyVoter importVoter);
     }
 }

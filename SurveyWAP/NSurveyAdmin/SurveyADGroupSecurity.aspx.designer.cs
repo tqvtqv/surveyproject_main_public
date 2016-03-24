@@ -10,8 +10,7 @@
 namespace Votations.NSurvey.WebAdmin.NSurveyAdmin {
     
     
-    public partial class SurveyADGroupSecurity
-    {
+    public partial class SurveyADGroupSecurity {
         
         /// <summary>
         /// MessageLabel control.
@@ -23,57 +22,57 @@ namespace Votations.NSurvey.WebAdmin.NSurveyAdmin {
         protected global::System.Web.UI.WebControls.Label MessageLabel;
         
         /// <summary>
-        /// literalIPRangesTitle control.
+        /// literalADGroupTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal literalIPRangesTitle;
+        protected global::System.Web.UI.WebControls.Literal literalADGroupTitle;
         
         /// <summary>
-        /// Label2 control.
+        /// lblGenerateCountPrompt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblGenerateCountPrompt;
         
         /// <summary>
-        /// lbAddNew control.
+        /// txtAdGroupName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button lbAddNew;
+        protected global::System.Web.UI.WebControls.TextBox txtAdGroupName;
         
         /// <summary>
-        /// literalIPRangeStart control.
+        /// btnAddADGroup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal literalIPRangeStart;
+        protected global::System.Web.UI.WebControls.Button btnAddADGroup;
         
         /// <summary>
-        /// literalIPRangeEnd control.
+        /// lvADGroups control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal literalIPRangeEnd;
+        protected global::System.Web.UI.WebControls.ListView lvADGroups;
         
         /// <summary>
-        /// gvIPRanges control.
+        /// btnDeleteSelected control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvIPRanges;
+        protected global::System.Web.UI.WebControls.Button btnDeleteSelected;
     }
 }

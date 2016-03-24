@@ -212,6 +212,10 @@ namespace Votations.NSurvey.BusinessRules
         {
             VoterFactory.Create().UpdateVoterUserName(voterId, userName);
         }
+        public void UpdateVoterADInfo(int surveyId, int voterId, VoterADInfo user)
+        {
+            VoterFactory.Create().UpdateVoterADInfo(surveyId, voterId, user);
+        }
         public void ImportVoter(int surveyId,NSurveyVoter importVoter)
         {
             VoterFactory.Create().ImportVoter(surveyId,importVoter);

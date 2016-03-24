@@ -229,7 +229,12 @@ namespace Votations.NSurvey.WebAdmin.UserControls
                 mnuMain.Items.Add(new MenuItem(((PageBase)Page).GetPageResource("ResultsSMHyperlink"), null, null, string.Format("{0}?surveyid={1}", UINavigator.ResultsReportHyperlink, SurveyId)));
 
                 if (((PageBase)Page).NSurveyUser.Identity.IsAdmin || ((PageBase)Page).NSurveyUser.HasRight(NSurveyRights.AccessReports))
-                    mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem(((PageBase)Page).GetPageResource("ResultsReportHyperlink"), null, null, string.Format("{0}?surveyid={1}", UINavigator.ResultsReportHyperlink, SurveyId)));
+                    mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem(((PageBase)Page).GetPageResource("ResultsReportHyperlink"), null, null, string.Format("{0}?surveyid={1}", 
+                        UINavigator.ResultsReportHyperlink, SurveyId)));
+
+                if (((PageBase)Page).NSurveyUser.Identity.IsAdmin || ((PageBase)Page).NSurveyUser.HasRight(NSurveyRights.AccessReports))
+                    mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem("VNPT Report", null, null, string.Format("{0}?surveyid={1}",
+                        UINavigator.VNPTGroupReportHyperlink, SurveyId)));
 
                 if (((PageBase)Page).NSurveyUser.Identity.IsAdmin || ((PageBase)Page).NSurveyUser.HasRight(NSurveyRights.CreateResultsFilter))
                     mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem(((PageBase)Page).GetPageResource("FiltersHyperlink"), null, null, string.Format("{0}?surveyid={1}", UINavigator.FilterEditor, SurveyId)));

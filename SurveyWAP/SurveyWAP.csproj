@@ -348,6 +348,8 @@
     <Content Include="NSurveyAdmin\CSS\surveymobile.css" />
     <Content Include="NSurveyAdmin\CSS\surveypreview.css" />
     <Content Include="NSurveyAdmin\CSS\voterreport.css" />
+    <Content Include="NSurveyAdmin\VNPTItemReport.aspx" />
+    <Content Include="NSurveyAdmin\VNPTGroupReport.aspx" />
     <Content Include="NSurveyAdmin\FilterCreator.aspx" />
     <Content Include="NSurveyAdmin\FilterEditor.aspx" />
     <Content Include="NSurveyAdmin\Help\About.aspx" />
@@ -1246,6 +1248,12 @@
     <EmbeddedResource Include="NSurveyAdmin\EditMatrixQuestion.aspx.resx">
       <DependentUpon>EditMatrixQuestion.aspx.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NSurveyAdmin\VNPTItemReport.aspx.resx">
+      <DependentUpon>VNPTItemReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSurveyAdmin\VNPTGroupReport.aspx.resx">
+      <DependentUpon>VNPTGroupReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NSurveyAdmin\FilterCreator.aspx.resx">
       <DependentUpon>FilterCreator.aspx.cs</DependentUpon>
     </EmbeddedResource>
@@ -1368,6 +1376,20 @@
     </Compile>
     <Compile Include="NSurveyAdmin\ControlCode.aspx.designer.cs">
       <DependentUpon>ControlCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NSurveyAdmin\VNPTItemReport.aspx.cs">
+      <DependentUpon>VNPTItemReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSurveyAdmin\VNPTItemReport.aspx.designer.cs">
+      <DependentUpon>VNPTItemReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NSurveyAdmin\VNPTGroupReport.aspx.cs">
+      <DependentUpon>VNPTGroupReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSurveyAdmin\VNPTGroupReport.aspx.designer.cs">
+      <DependentUpon>VNPTGroupReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="NSurveyAdmin\FilterCreator.aspx.cs">
       <DependentUpon>FilterCreator.aspx</DependentUpon>

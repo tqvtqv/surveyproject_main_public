@@ -16,6 +16,7 @@ namespace Votations.NSurvey.SQLServerDAL
     using Votations.NSurvey.Data;
     using Votations.NSurvey.IDAL;
     using System.Linq;
+    using BE.Votations.NSurvey.Data;
 
     /// <summary>
     /// SQL Server DAL implementation.
@@ -853,8 +854,22 @@ namespace Votations.NSurvey.SQLServerDAL
                 commandParameters.Add(new SqlParameter("@UserName", userName).SqlValue);
             }
 
-            DbConnection.db.ExecuteNonQuery( "vts_spVoterUpdateUserName", commandParameters.ToArray());
+            DbConnection.db.ExecuteNonQuery("vts_spVoterUpdateUserName", commandParameters.ToArray());
         }
+        public void UpdateVoterADInfo(int surveyId, int voterId, VoterADInfo user)
+        {
+            ArrayList commandParameters = new ArrayList();
+            {
+                commandParameters.Add(new SqlParameter("@SurveyId", surveyId).SqlValue);
+                commandParameters.Add(new SqlParameter("@VoterId", voterId).SqlValue);
+                commandParameters.Add(new SqlParameter("@AdGroup", user.ADGroup).SqlValue);
+                commandParameters.Add(new SqlParameter("@AdGroupLevel", user.ADGroupLevel).SqlValue);
+                commandParameters.Add(new SqlParameter("@AdPath", user.Path).SqlValue);
+            }
+
+            DbConnection.db.ExecuteNonQuery("vts_spVoterUpdateADInfo", commandParameters.ToArray());
+        }
+
     }
 }
 
