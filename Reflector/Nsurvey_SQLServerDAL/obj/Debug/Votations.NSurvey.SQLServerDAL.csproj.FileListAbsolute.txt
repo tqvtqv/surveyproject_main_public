@@ -32,7 +32,6 @@ D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_SQLServer
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_SQLServerDAL\obj\Debug\Votations.NSurvey.SQLServerDAL.dll
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_SQLServerDAL\obj\Debug\Votations.NSurvey.SQLServerDAL.pdb
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_SQLServerDAL\obj\Debug\Votations.NSurvey.SQLServerDAL.csprojResolveAssemblyReference.cache
-D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\obj\Debug\Votations.NSurvey.SQLServerDAL.csprojResolveAssemblyReference.cache
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Debug\Votations.NSurvey.SQLServerDAL.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Debug\Votations.NSurvey.SQLServerDAL.pdb
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
@@ -45,5 +44,6 @@ D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Debug\Votation
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Debug\Votations.NSurvey.DAL.pdb
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\obj\Debug\Votations.NSurvey.SQLServerDAL.csprojResolveAssemblyReference.cache
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\obj\Debug\Votations.NSurvey.SQLServerDAL.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_SQLServerDAL\obj\Debug\Votations.NSurvey.SQLServerDAL.pdb

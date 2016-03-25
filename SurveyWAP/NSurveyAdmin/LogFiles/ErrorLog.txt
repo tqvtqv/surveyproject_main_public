@@ -1,0 +1,236 @@
+********** 3/25/2016 2:03:12 PM **********
+Inner Exception Type: System.ArgumentNullException
+Inner Exception: Value cannot be null.
+Parameter name: assemblyString
+Inner Source: mscorlib
+Inner Stack Trace: 
+   at System.Reflection.RuntimeAssembly.CreateAssemblyName(String assemblyString, Boolean forIntrospection, RuntimeAssembly& assemblyFromResolveEvent)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Votation.NSurvey.LDAPProvider.LDAPFactory.Create() in D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\Votation.NSurvey.LDAPProvider\LDAPFactory.cs:line 25
+   at Votations.NSurvey.Security.ADGroupSecurityAddIn.ProcessVoterData(VoterAnswersData voter) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.Security\ADGroupSecurityAddIn.cs:line 128
+   at Votations.NSurvey.WebControls.SurveyBox.UnLoadSecurityAddIns(VoterAnswersData voterData) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 1557
+   at Votations.NSurvey.WebControls.SurveyBox.SubmitAnswersToDb() in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 1530
+   at Votations.NSurvey.WebControls.SurveyBox.OnAnswersSubmit(Object sender, EventArgs e) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 860
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.nsurveyadmin_takesurvey_aspx.ProcessRequest(HttpContext context) in c:\Users\viettq\AppData\Local\Temp\Temporary ASP.NET Files\vs\8aed6fa8\d519847a\App_Web_uu1qlbdy.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 3/25/2016 2:06:11 PM **********
+Inner Exception Type: System.IO.FileNotFoundException
+Inner Exception: Could not load file or assembly 'Votations.NSurvey.LDAPProvider' or one of its dependencies. The system cannot find the file specified.
+Inner Source: mscorlib
+Inner Stack Trace: 
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Votation.NSurvey.LDAPProvider.LDAPFactory.Create() in D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\Votation.NSurvey.LDAPProvider\LDAPFactory.cs:line 25
+   at Votations.NSurvey.Security.ADGroupSecurityAddIn.ProcessVoterData(VoterAnswersData voter) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.Security\ADGroupSecurityAddIn.cs:line 128
+   at Votations.NSurvey.WebControls.SurveyBox.UnLoadSecurityAddIns(VoterAnswersData voterData) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 1557
+   at Votations.NSurvey.WebControls.SurveyBox.SubmitAnswersToDb() in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 1530
+   at Votations.NSurvey.WebControls.SurveyBox.OnAnswersSubmit(Object sender, EventArgs e) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 860
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.nsurveyadmin_takesurvey_aspx.ProcessRequest(HttpContext context) in c:\Users\viettq\AppData\Local\Temp\Temporary ASP.NET Files\vs\8aed6fa8\d519847a\App_Web_s4atipvu.6.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 3/25/2016 2:11:47 PM **********
+Inner Exception Type: System.NullReferenceException
+Inner Exception: Object reference not set to an instance of an object.
+Inner Source: Votations.NSurvey.WebControls
+Inner Stack Trace: 
+   at Votations.NSurvey.Security.ADGroupSecurityAddIn.ProcessVoterData(VoterAnswersData voter) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.Security\ADGroupSecurityAddIn.cs:line 128
+   at Votations.NSurvey.WebControls.SurveyBox.UnLoadSecurityAddIns(VoterAnswersData voterData) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 1557
+   at Votations.NSurvey.WebControls.SurveyBox.SubmitAnswersToDb() in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 1530
+   at Votations.NSurvey.WebControls.SurveyBox.OnAnswersSubmit(Object sender, EventArgs e) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 860
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.nsurveyadmin_takesurvey_aspx.ProcessRequest(HttpContext context) in c:\Users\viettq\AppData\Local\Temp\Temporary ASP.NET Files\vs\8aed6fa8\d519847a\App_Web_rabajrgi.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 3/25/2016 2:13:38 PM **********
+Inner Exception Type: System.NullReferenceException
+Inner Exception: Object reference not set to an instance of an object.
+Inner Source: Votations.NSurvey.WebControls
+Inner Stack Trace: 
+   at Votations.NSurvey.Security.ADGroupSecurityAddIn.ProcessVoterData(VoterAnswersData voter) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.Security\ADGroupSecurityAddIn.cs:line 128
+   at Votations.NSurvey.WebControls.SurveyBox.UnLoadSecurityAddIns(VoterAnswersData voterData) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 1557
+   at Votations.NSurvey.WebControls.SurveyBox.SubmitAnswersToDb() in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 1530
+   at Votations.NSurvey.WebControls.SurveyBox.OnAnswersSubmit(Object sender, EventArgs e) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\Votations.NSurvey.WebControls\SurveyBox.cs:line 860
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.nsurveyadmin_takesurvey_aspx.ProcessRequest(HttpContext context) in c:\Users\viettq\AppData\Local\Temp\Temporary ASP.NET Files\vs\8aed6fa8\d519847a\App_Web_rabajrgi.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 3/25/2016 2:45:21 PM **********
+Inner Exception Type: System.Web.HttpException
+Inner Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'VoterID'.
+Inner Source: System.Web
+Inner Stack Trace: 
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.DataGrid.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.BaseDataList.DataBind()
+   at Votations.NSurvey.WebAdmin.VNPTGroupReport.BindData(Int32 groupId) in D:\Work\Projects\surveyproject\SurveyWAP\NSurveyAdmin\VNPTGroupReport.aspx.cs:line 110
+   at Votations.NSurvey.WebAdmin.VNPTGroupReport.Page_Load(Object sender, EventArgs e) in D:\Work\Projects\surveyproject\SurveyWAP\NSurveyAdmin\VNPTGroupReport.aspx.cs:line 65
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.nsurveyadmin_vnptgroupreport_aspx.ProcessRequest(HttpContext context) in c:\Users\viettq\AppData\Local\Temp\Temporary ASP.NET Files\vs\8aed6fa8\d519847a\App_Web_md5gtopd.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 3/25/2016 2:48:11 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Column 'TotalRecords' does not belong to table Table.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Votations.NSurvey.WebAdmin.VNPTGroupReport.BindData(Int32 groupId) in D:\Work\Projects\surveyproject\SurveyWAP\NSurveyAdmin\VNPTGroupReport.aspx.cs:line 114
+   at Votations.NSurvey.WebAdmin.VNPTGroupReport.Page_Load(Object sender, EventArgs e) in D:\Work\Projects\surveyproject\SurveyWAP\NSurveyAdmin\VNPTGroupReport.aspx.cs:line 65
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.nsurveyadmin_vnptgroupreport_aspx.ProcessRequest(HttpContext context) in c:\Users\viettq\AppData\Local\Temp\Temporary ASP.NET Files\vs\8aed6fa8\d519847a\App_Web_vdiocwqx.5.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 3/25/2016 3:01:48 PM **********
+Inner Exception Type: System.Web.HttpException
+Inner Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'VoterID'.
+Inner Source: System.Web
+Inner Stack Trace: 
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.DataGrid.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.BaseDataList.DataBind()
+   at Votations.NSurvey.WebAdmin.VNPTItemReport.BindData() in D:\Work\Projects\surveyproject\SurveyWAP\NSurveyAdmin\VNPTItemReport.aspx.cs:line 110
+   at Votations.NSurvey.WebAdmin.VNPTItemReport.Page_Load(Object sender, EventArgs e) in D:\Work\Projects\surveyproject\SurveyWAP\NSurveyAdmin\VNPTItemReport.aspx.cs:line 65
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.nsurveyadmin_vnptitemreport_aspx.ProcessRequest(HttpContext context) in c:\Users\viettq\AppData\Local\Temp\Temporary ASP.NET Files\vs\8aed6fa8\d519847a\App_Web_w1iaa23l.13.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 3/25/2016 3:05:49 PM **********
+Inner Exception Type: Votations.NSurvey.VoterNotFoundException
+Inner Exception: Voter not found in the database!
+Inner Source: Votations.NSurvey.BLL
+Inner Stack Trace: 
+   at Votations.NSurvey.DataAccess.Voters.GetVoterAnswers(Int32 voterId) in D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\Votations.NSurvey.DataAccess\Voters.cs:line 109
+   at Votations.NSurvey.WebAdmin.VoterReport.BindData() in D:\Work\Projects\surveyproject\SurveyWAP\NSurveyAdmin\VoterReport.aspx.cs:line 134
+   at Votations.NSurvey.WebAdmin.VoterReport.Page_Load(Object sender, EventArgs e) in D:\Work\Projects\surveyproject\SurveyWAP\NSurveyAdmin\VoterReport.aspx.cs:line 100
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.nsurveyadmin_voterreport_aspx.ProcessRequest(HttpContext context) in c:\Users\viettq\AppData\Local\Temp\Temporary ASP.NET Files\vs\8aed6fa8\d519847a\App_Web_geghjci5.3.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+

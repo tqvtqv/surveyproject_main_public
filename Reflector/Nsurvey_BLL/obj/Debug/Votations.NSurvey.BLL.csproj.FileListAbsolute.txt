@@ -26,12 +26,12 @@ D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_BLL\bin\D
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.dll
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.pdb
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.csprojResolveAssemblyReference.cache
-D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.csprojResolveAssemblyReference.cache
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.BLL.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.BLL.pdb
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.BE.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.DAL.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.BE.pdb
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.DAL.pdb
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.csprojResolveAssemblyReference.cache
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.pdb

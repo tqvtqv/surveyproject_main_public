@@ -106,27 +106,27 @@ namespace Votations.NSurvey.WebAdmin
 			DataSet textEntries = new Voters().GetVotersByItem(SurveyId);
 
 			FieldReportDataGrid.DataSource = textEntries ;
-			FieldReportDataGrid.DataKeyField = "VoterID";
+			FieldReportDataGrid.DataKeyField = "QuestionId";
 			FieldReportDataGrid.DataBind();
 
-			if (textEntries.Tables[0].Rows.Count != 0)
-			{
-				totalRecords = int.Parse(textEntries.Tables[0].Rows[0]["TotalRecords"].ToString());
-				CurrentPageLabel.Text = FieldReportDataGrid.CurrentPageIndex.ToString();
-				if (textEntries.Tables[0].Rows.Count > 0)
-				{
-					if ((totalRecords%25) == 0)
-					{
-						totalPages = totalRecords/25;
-					}
-					else
-					{
-						totalPages = (totalRecords/25) + 1;
-					}
+			//if (textEntries.Tables[0].Rows.Count != 0)
+			//{
+			//	totalRecords = int.Parse(textEntries.Tables[0].Rows[0]["TotalRecords"].ToString());
+			//	CurrentPageLabel.Text = FieldReportDataGrid.CurrentPageIndex.ToString();
+			//	if (textEntries.Tables[0].Rows.Count > 0)
+			//	{
+			//		if ((totalRecords%25) == 0)
+			//		{
+			//			totalPages = totalRecords/25;
+			//		}
+			//		else
+			//		{
+			//			totalPages = (totalRecords/25) + 1;
+			//		}
 				
-				}
-				TotalPagesLabel.Text = totalPages.ToString();
-			}
+			//	}
+			//	TotalPagesLabel.Text = totalPages.ToString();
+			//}
 
 			// Should we enable the next link?
 			if (totalPages == 1 || totalRecords == 0)
@@ -166,15 +166,16 @@ namespace Votations.NSurvey.WebAdmin
 		private void BindItemData(object sender, System.Web.UI.WebControls.DataGridItemEventArgs e)
 		{
 			// Hides or shows voter id, ip and startdate
-			e.Item.Cells[2].Visible = true;
-			e.Item.Cells[4].Visible = false;
-			e.Item.Cells[5].Visible = false;
+			e.Item.Cells[2].Visible = false;
+			
 			if (!new Surveys().IsSurveyScored(SurveyId))
 			{
-				e.Item.Cells[6].Visible = false;
+                e.Item.Cells[4].Visible = false;
+                e.Item.Cells[5].Visible = false;
+                
 			}
 
-			e.Item.Cells[e.Item.Cells.Count-1].Visible = false;
+			//e.Item.Cells[e.Item.Cells.Count-1].Visible = false;
 			
 			if (e.Item.ItemType == ListItemType.Header)
 			{

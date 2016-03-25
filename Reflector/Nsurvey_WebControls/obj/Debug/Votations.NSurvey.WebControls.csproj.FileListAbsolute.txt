@@ -63,9 +63,6 @@ D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_WebContro
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.pdb
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.csprojResolveAssemblyReference.cache
 D:\02_Programming\SurveyTest\Source_Survey_21Beta_TS\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.csproj.GenerateResource.Cache
-D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.csprojResolveAssemblyReference.cache
-D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.Votations.NSurvey.Designer.AutoFormat.resources
-D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.csproj.GenerateResource.Cache
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\bin\Debug\Votations.NSurvey.WebControls.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\bin\Debug\Votations.NSurvey.WebControls.pdb
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\bin\Debug\CKEditor.NET.dll
@@ -85,5 +82,8 @@ D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\bin\Debug\Votations
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\bin\Debug\Votations.NSurvey.UserProvider.pdb
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.csprojResolveAssemblyReference.cache
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.Votations.NSurvey.Designer.AutoFormat.resources
+D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.csproj.GenerateResource.Cache
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_WebControls\obj\Debug\Votations.NSurvey.WebControls.pdb

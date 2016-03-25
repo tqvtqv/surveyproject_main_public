@@ -19,9 +19,9 @@ namespace Votation.NSurvey.LDAPProvider
                 config = ConfigurationManager.AppSettings;
             }
             string typeName = config["LDAPProviderClass"];
-            if (String.IsNullOrEmpty(typeName)) typeName = "Votations.NSurvey.UserProvider.CommonLDAPProvider";
+            if (String.IsNullOrEmpty(typeName)) typeName = "Votations.NSurvey.LDAPProvider.CommonLDAPProvider";
             string assemblyString = config["LDAPProviderAssembly"];
-            if (String.IsNullOrEmpty(typeName)) typeName = "Votations.NSurvey.LDAPProvider";
+            if (String.IsNullOrEmpty(assemblyString)) assemblyString = "Votations.NSurvey.UserProvider";
             return (ILDAPProvider)Assembly.Load(assemblyString).CreateInstance(typeName);
         }
     }

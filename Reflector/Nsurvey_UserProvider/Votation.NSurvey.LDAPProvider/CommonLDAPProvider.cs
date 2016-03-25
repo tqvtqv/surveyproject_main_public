@@ -78,12 +78,12 @@ namespace Votations.NSurvey.LDAPProvider
                 if (user != null)
                 {
                     var path = (string)user.Properties["distinguishedName"][0];
-                    var ouPaths = GetOUPath(path, true);
+                    var ouPaths = GetOUPath(path, false);
                     result = new VoterADInfo
                     {
                         UserName = userName,
                         Path = String.Join(",", ouPaths),
-                        ADGroup = GetFirstPath(path, false),
+                        ADGroup = ouPaths.First(),
                         ADGroupLevel = ouPaths.Count(),
                         Email = (string)user.Properties["mail"][0]
                     };
