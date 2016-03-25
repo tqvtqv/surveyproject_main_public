@@ -432,5 +432,5 @@ D:\Work\Projects\surveyproject\SurveyWAP\bin\Microsoft.Practices.EnterpriseLibra
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.dll
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.pdb
-D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.VNPTReporting2.resources
-D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.VNPTReporting1.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.VNPTItemReport.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.VNPTGroupReport.resources

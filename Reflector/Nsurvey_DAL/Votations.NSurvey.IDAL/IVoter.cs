@@ -37,6 +37,8 @@ namespace Votations.NSurvey.IDAL
         VoterData GetVotersInvitationAnswered(int surveyId, int pageNumber, int pageSize, out int totalRecords);
         InvitationQueueData GetVotersInvitationQueue(int surveyId, int pageNumber, int pageSize, out int totalRecords);
         DataSet GetVotersTextEntries(int surveyId, int pageNumber, int pageSize, DateTime startDate, DateTime endDate);
+        DataSet GetVotersByGroup(int surveyId, int groupId);
+        DataSet GetVotersByItem(int surveyId);
         bool HasUserNameVoted(int surveyId, string userName);
         int IsUIdValid(string UId);
         void LogInvitationError(InvitationLogData invitationLog);

@@ -62,7 +62,7 @@ namespace Votations.NSurvey.WebAdmin
                 ((Wap)Master.Master).HeaderControl.SurveyId = SurveyId;
 				FieldReportDataGrid.CurrentPageIndex = 1;
 				PreviousPageLinkButton.Enabled = false;
-				BindData();
+				BindData(0);
 			}
 
 		}
@@ -98,12 +98,12 @@ namespace Votations.NSurvey.WebAdmin
 		/// Get the current DB stats and fill 
 		/// the label with them
 		/// </summary>
-		private void BindData()
+		private void BindData(int groupId)
 		{
 			int totalPages = 0,
 				totalRecords = 0;
 			
-			DataSet textEntries = new Voters().GetVotersTextEntries(SurveyId, FieldReportDataGrid.CurrentPageIndex, 25, new DateTime(2004,1,1), DateTime.Now);
+			DataSet textEntries = new Voters().GetVotersByGroup(SurveyId, groupId);
 
 			FieldReportDataGrid.DataSource = textEntries ;
 			FieldReportDataGrid.DataKeyField = "VoterID";
@@ -210,7 +210,7 @@ namespace Votations.NSurvey.WebAdmin
 				FieldReportDataGrid.CurrentPageIndex++;
 
 				// Get the data for the DataGrid.
-				BindData();
+				BindData(0);
 
 				// Should we disable the previous link?
 				if (FieldReportDataGrid.CurrentPageIndex <= totalPages)
@@ -243,7 +243,7 @@ namespace Votations.NSurvey.WebAdmin
 				FieldReportDataGrid.CurrentPageIndex--;
 
 				// Get the data for the DataGrid.
-				BindData();
+				BindData(0);
 
 				// Should we disable the previous link?
 				if (FieldReportDataGrid.CurrentPageIndex == 1)
@@ -262,10 +262,10 @@ namespace Votations.NSurvey.WebAdmin
 
 		private void ViewDetails(object sender, System.EventArgs e)
 		{
-			UINavigator.NavigateToVoterReport(SurveyId,
-				int.Parse(FieldReportDataGrid.DataKeys[FieldReportDataGrid.SelectedIndex].ToString()), 
-				MenuIndex);
-		}
+			
+            BindData(int.Parse(FieldReportDataGrid.DataKeys[FieldReportDataGrid.SelectedIndex].ToString()));
+
+        }
 	
 		private void FieldReportDataGrid_DeleteCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
@@ -275,7 +275,7 @@ namespace Votations.NSurvey.WebAdmin
 			{
 				FieldReportDataGrid.CurrentPageIndex--;
 			}
-			BindData();
+			BindData(0);
 		}
 	}
 

@@ -870,6 +870,29 @@ namespace Votations.NSurvey.SQLServerDAL
             DbConnection.db.ExecuteNonQuery("vts_spVoterUpdateADInfo", commandParameters.ToArray());
         }
 
+        public DataSet GetVotersByGroup(int surveyId, int groupId)
+        {
+            ArrayList commandParameters = new ArrayList();
+            {
+                commandParameters.Add(new SqlParameter("@SurveyId", surveyId).SqlValue);
+                commandParameters.Add(new SqlParameter("@GroupId", groupId).SqlValue);
+                
+            }
+
+            return DbConnection.db.ExecuteDataSet("vts_spVoterGetPivotGroups", commandParameters.ToArray());
+        }
+
+        public DataSet GetVotersByItem(int surveyId)
+        {
+            ArrayList commandParameters = new ArrayList();
+            {
+                commandParameters.Add(new SqlParameter("@SurveyId", surveyId).SqlValue);
+                
+
+            }
+
+            return DbConnection.db.ExecuteDataSet("vts_spVoterGetPivotQuestions", commandParameters.ToArray());
+        }
     }
 }
 

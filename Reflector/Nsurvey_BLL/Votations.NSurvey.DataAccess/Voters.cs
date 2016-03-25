@@ -154,6 +154,14 @@ namespace Votations.NSurvey.DataAccess
         {
             return VoterFactory.Create().GetVotersTextEntries(surveyId, pageNumber, pageSize, startDate, endDate);
         }
+        public DataSet GetVotersByGroup(int surveyId, int groupId)
+        {
+            return VoterFactory.Create().GetVotersByGroup(surveyId, groupId);
+        }
+        public DataSet GetVotersByItem(int surveyId)
+        {
+            return VoterFactory.Create().GetVotersByItem(surveyId);
+        }
 
         /// <summary>
         /// Check if the username has already taken the survey
