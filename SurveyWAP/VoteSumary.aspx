@@ -8,16 +8,16 @@
         <div >
 
     <div id="DivPrint">
-
+        <asp:Literal ID="SurveyTitle" runat="server" EnableViewState="False">Voterinformation</asp:Literal>
                 <div style="width: 100%; text-align: center; margin-left: 57px; top: 15px;">
      <asp:Label ID="MessageLabel" runat="server"  CssClass="ErrorMessage" Visible="False"></asp:Label>
                     </div>
 
-            
+      
      <fieldset style="width:100%; margin-left:12px; margin-top:15px;" title="">
             <legend class="titleFont" style="margin: 0px 15px 0 15px; text-align:left;">
 
-                                <asp:Literal ID="VoterInformationTitle" runat="server" EnableViewState="False">Voterinformation</asp:Literal>
+                                <asp:Literal ID="VoterInformationTitle" runat="server" EnableViewState="False">Thông tin người đánh giá</asp:Literal>
     </legend><br />
 
                         <script type="text/javascript">
@@ -63,15 +63,7 @@
                                 -->
 
                             <table class="TableLayoutContainer innerText">
-                                <tr>
-                                    <td width="160px">
-                                        <strong>
-                                            <asp:Literal ID="VoterDBIDLabel" runat="server" EnableViewState="False">Voter DB ID :</asp:Literal></strong>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="VoterUIDLabel" runat="server"></asp:Label>
-                                    </td>
-                                </tr>
+                                
                                 <tr>
                                     <td width="160px">
                                         <strong>
@@ -90,15 +82,7 @@
                                         <asp:Label ID="VoterEmail" runat="server"></asp:Label>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td width="160px">
-                                        <strong>
-                                            <asp:Literal ID="VoterLanguageLabel" runat="server" EnableViewState="False">Voter language :</asp:Literal></strong>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="VoterLanguageValueLabel" runat="server"></asp:Label>
-                                    </td>
-                                </tr>
+                                
                                 <tr>
                                     <td width="160px">
                                         <strong>
@@ -127,7 +111,26 @@
                                         <br />
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td width="160px">
+                                        <strong>
+                                            <asp:Literal ID="VoterDBIDLabel" runat="server" EnableViewState="False">Tổng điểm các chỉ tiêu:</asp:Literal></strong>
+                                    </td>
+                                    <td>
+                                        <b><asp:Label ID="VoterScoreTotalLabel" runat="server"></asp:Label></b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="160px">
+                                        <strong>
+                                            <asp:Literal ID="VoterLanguageLabel" runat="server" EnableViewState="False">Điểm trung bình phiếu đánh giá:</asp:Literal></strong>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="VoterAverageScoreLabel" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
                             </table>
+         
        </fieldset>
 
           
@@ -164,7 +167,7 @@
                                                     </ItemTemplate>
                                                 </asp:TemplateColumn>
                                             </Columns>
-                                        </asp:DataGrid><b><asp:Label ID="VoterScoreTotalLabel" runat="server"></asp:Label></b>
+                                        </asp:DataGrid>
                                     </td>
                                 </tr>
                             </table>

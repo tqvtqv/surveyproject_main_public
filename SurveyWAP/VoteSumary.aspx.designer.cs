@@ -13,6 +13,15 @@ namespace Votations.NSurvey.WebAdmin {
     public partial class VoteSumary {
         
         /// <summary>
+        /// SurveyTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal SurveyTitle;
+        
+        /// <summary>
         /// CreatePdfButton control.
         /// </summary>
         /// <remarks>
@@ -20,5 +29,14 @@ namespace Votations.NSurvey.WebAdmin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton CreatePdfButton;
+        
+        /// <summary>
+        /// VoterAverageScoreLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label VoterAverageScoreLabel;
     }
 }

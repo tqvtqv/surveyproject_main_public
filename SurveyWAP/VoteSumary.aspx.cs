@@ -136,7 +136,7 @@ namespace Votations.NSurvey.WebAdmin
 		private void BindData()
 		{
 			isScored = new Surveys().IsSurveyScored(SurveyId);
-
+            var survey = new Surveys().GetSurveyById(SurveyId, null);
 			TimeSpan timeTaken;
 			_voterAnswers = new Voters().GetVoterAnswers(_voterId);
 
@@ -148,8 +148,9 @@ namespace Votations.NSurvey.WebAdmin
 			{
 				timeTaken = new TimeSpan(0);
 			}
+            SurveyTitle.Text = survey.Surveys[0].Title;
 
-			VoterUIDLabel.Text = _voterId.ToString();
+            
 			IPAddressLabel.Text = _voterAnswers.Voters[0].IPSource;
 			VoteDateLabel.Text = _voterAnswers.Voters[0].VoteDate.ToString();
 			VoterEmail.Text = _voterAnswers.Voters[0].IsEmailNull() ? GetPageResource("AnonymousVoteInfo") : _voterAnswers.Voters[0].Email;
@@ -181,8 +182,10 @@ namespace Votations.NSurvey.WebAdmin
 			QuestionsDataGrid.DataBind();
 			if (isScored)
 			{
-				VoterScoreTotalLabel.Text = GetPageResource("VoterScoreTotalLabel") + _totalScore.ToString();
-			}
+				//VoterScoreTotalLabel.Text = GetPageResource("VoterScoreTotalLabel") + _totalScore.ToString();
+                VoterScoreTotalLabel.Text =  _totalScore.ToString();
+                VoterAverageScoreLabel.Text = (questionCount != 0) ? (_totalScore / questionCount).ToString("N2") : "";
+            }
 		}
 
 		private DataView GetParentQuestions()
@@ -222,9 +225,9 @@ namespace Votations.NSurvey.WebAdmin
 			if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
 			{
 				int questionId = int.Parse(QuestionsDataGrid.DataKeys[e.Item.ItemIndex].ToString());
-				
-				// Check if the question has childs
-				string filter = string.Format("ParentQuestionID = {0}", questionId); 
+                questionCount++;
+                // Check if the question has childs
+                string filter = string.Format("ParentQuestionID = {0}", questionId); 
 				DataView childQuestions = 
 					new DataView(_questionData.Questions,filter,"DisplayOrder", DataViewRowState.CurrentRows);
 				if (childQuestions.Count == 0)
@@ -242,7 +245,8 @@ namespace Votations.NSurvey.WebAdmin
 							scoreTotalLabel.Text = string.Format("<br />" +GetPageResource("QuestionScoreLabel")+ _questionScore);
 						}
 						_totalScore += _questionScore;
-						_questionScore = 0;
+                        
+                        _questionScore = 0;
 					}
 				}
 				else
@@ -662,7 +666,7 @@ namespace Votations.NSurvey.WebAdmin
 
 		int _voterId,
 			_questionScore = 0,
-			_totalScore = 0;
+			_totalScore = 0, questionCount=0;
 		bool isScored = false;
 		protected VoterAnswersData _voterAnswers;
 		QuestionData _questionData;
