@@ -114,7 +114,7 @@
                                 <tr>
                                     <td width="160px">
                                         <strong>
-                                            <asp:Literal ID="VoterDBIDLabel" runat="server" EnableViewState="False">Tổng điểm các chỉ tiêu:</asp:Literal></strong>
+                                            <asp:Literal ID="VoterTotalLabel" runat="server" EnableViewState="False">Tổng điểm các chỉ tiêu:</asp:Literal></strong>
                                     </td>
                                     <td>
                                         <b><asp:Label ID="VoterScoreTotalLabel" runat="server"></asp:Label></b>
@@ -123,7 +123,7 @@
                                 <tr>
                                     <td width="160px">
                                         <strong>
-                                            <asp:Literal ID="VoterLanguageLabel" runat="server" EnableViewState="False">Điểm trung bình phiếu đánh giá:</asp:Literal></strong>
+                                            <asp:Literal ID="VoterAverageLabel" runat="server" EnableViewState="False">Điểm trung bình phiếu đánh giá:</asp:Literal></strong>
                                     </td>
                                     <td>
                                         <asp:Label ID="VoterAverageScoreLabel" runat="server"></asp:Label>

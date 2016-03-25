@@ -31,6 +31,24 @@ namespace Votations.NSurvey.WebAdmin {
         protected global::System.Web.UI.WebControls.ImageButton CreatePdfButton;
         
         /// <summary>
+        /// VoterTotalLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal VoterTotalLabel;
+        
+        /// <summary>
+        /// VoterAverageLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal VoterAverageLabel;
+        
+        /// <summary>
         /// VoterAverageScoreLabel control.
         /// </summary>
         /// <remarks>

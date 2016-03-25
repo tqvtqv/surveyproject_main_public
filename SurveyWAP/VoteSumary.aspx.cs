@@ -118,7 +118,7 @@ namespace Votations.NSurvey.WebAdmin
 		private void LocalizePage()
 		{
 			VoterInformationTitle.Text = GetPageResource("VoterInformationTitle");
-			VoterDBIDLabel.Text = GetPageResource("VoterDBIDLabel");
+			//VoterDBIDLabel.Text = GetPageResource("VoterDBIDLabel");
 			VoterEmailLabel.Text = GetPageResource("VoterEmailLabel");
 			VoterUserNameLabel.Text = GetPageResource("VoterUserNameLabel");
 			VoterIPAddressLabel.Text = GetPageResource("VoterIPAddressLabel");
@@ -126,7 +126,7 @@ namespace Votations.NSurvey.WebAdmin
 			TimeToTakeLabel.Text = GetPageResource("TimeToTakeLabel");
 			SurveyAnswersTitle.Text = GetPageResource("SurveyAnswersTitle");
 			EditAnswersLinkButton.Text = GetPageResource("EditAnswersLinkButton");
-			VoterLanguageLabel.Text = GetPageResource("VoterLanguageLabel");
+			//VoterLanguageLabel.Text = GetPageResource("VoterLanguageLabel");
 		}
 
 		/// <summary>
@@ -155,8 +155,8 @@ namespace Votations.NSurvey.WebAdmin
 			VoteDateLabel.Text = _voterAnswers.Voters[0].VoteDate.ToString();
 			VoterEmail.Text = _voterAnswers.Voters[0].IsEmailNull() ? GetPageResource("AnonymousVoteInfo") : _voterAnswers.Voters[0].Email;
 			VoterUserName.Text = _voterAnswers.Voters[0].IsContextUserNameNull() ?  GetPageResource("ContextUserNameDisabled") : _voterAnswers.Voters[0].ContextUserName;
-			VoterLanguageValueLabel.Text = _voterAnswers.Voters[0].IsLanguageCodeNull() || _voterAnswers.Voters[0].LanguageCode.Length == 0 ?  
-				GetPageResource("LanguageUndefined") : _voterAnswers.Voters[0].LanguageCode;
+			//VoterLanguageValueLabel.Text = _voterAnswers.Voters[0].IsLanguageCodeNull() || _voterAnswers.Voters[0].LanguageCode.Length == 0 ?  
+			//	GetPageResource("LanguageUndefined") : _voterAnswers.Voters[0].LanguageCode;
 			TimeToTakeSurveyLabel.Text = string.Format("{0} {1}, {2} secs.", timeTaken.Minutes.ToString(), GetPageResource("MinutesInfo"), timeTaken.Seconds.ToString());
 
 			WebSecurityAddInCollection securityAddIns = WebSecurityAddInFactory.CreateWebSecurityAddInCollection(new SecurityAddIns().GetWebSecurityAddIns(SurveyId), ViewState, null);
