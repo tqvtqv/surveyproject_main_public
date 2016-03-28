@@ -129,64 +129,64 @@ namespace Votations.NSurvey.WebAdmin
 			//VoterLanguageLabel.Text = GetPageResource("VoterLanguageLabel");
 		}
 
-		/// <summary>
-		/// Get the current DB stats and fill 
-		/// the label with them
-		/// </summary>
-		private void BindData()
-		{
-			isScored = new Surveys().IsSurveyScored(SurveyId);
+        /// <summary>
+        /// Get the current DB stats and fill 
+        /// the label with them
+        /// </summary>
+        private void BindData()
+        {
+            isScored = new Surveys().IsSurveyScored(SurveyId);
             var survey = new Surveys().GetSurveyById(SurveyId, null);
-			TimeSpan timeTaken;
-			_voterAnswers = new Voters().GetVoterAnswers(_voterId);
+            TimeSpan timeTaken;
+            _voterAnswers = new Voters().GetVoterAnswers(_voterId);
 
-			if (!_voterAnswers.Voters[0].IsVoteDateNull() && !_voterAnswers.Voters[0].IsStartDateNull())
-			{
-				timeTaken = _voterAnswers.Voters[0].VoteDate - _voterAnswers.Voters[0].StartDate;
-			}
-			else
-			{
-				timeTaken = new TimeSpan(0);
-			}
+            if (!_voterAnswers.Voters[0].IsVoteDateNull() && !_voterAnswers.Voters[0].IsStartDateNull())
+            {
+                timeTaken = _voterAnswers.Voters[0].VoteDate - _voterAnswers.Voters[0].StartDate;
+            }
+            else
+            {
+                timeTaken = new TimeSpan(0);
+            }
             SurveyTitle.Text = survey.Surveys[0].Title;
 
-            
-			IPAddressLabel.Text = _voterAnswers.Voters[0].IPSource;
-			VoteDateLabel.Text = _voterAnswers.Voters[0].VoteDate.ToString();
-			VoterEmail.Text = _voterAnswers.Voters[0].IsEmailNull() ? GetPageResource("AnonymousVoteInfo") : _voterAnswers.Voters[0].Email;
-			VoterUserName.Text = _voterAnswers.Voters[0].IsContextUserNameNull() ?  GetPageResource("ContextUserNameDisabled") : _voterAnswers.Voters[0].ContextUserName;
-			//VoterLanguageValueLabel.Text = _voterAnswers.Voters[0].IsLanguageCodeNull() || _voterAnswers.Voters[0].LanguageCode.Length == 0 ?  
-			//	GetPageResource("LanguageUndefined") : _voterAnswers.Voters[0].LanguageCode;
-			TimeToTakeSurveyLabel.Text = string.Format("{0} {1}, {2} secs.", timeTaken.Minutes.ToString(), GetPageResource("MinutesInfo"), timeTaken.Seconds.ToString());
 
-			WebSecurityAddInCollection securityAddIns = WebSecurityAddInFactory.CreateWebSecurityAddInCollection(new SecurityAddIns().GetWebSecurityAddIns(SurveyId), ViewState, null);
-			NameValueCollection addInVoterData;
-			for (int i=0;i<securityAddIns.Count;i++)
-			{
-				addInVoterData = securityAddIns[i].GetAddInVoterData(_voterId);
-				if (addInVoterData != null)
-				{
-					// Creates a new addin voter details page
-					SecurityAddInVoterReportControl addInVoterControl = 
-						(SecurityAddInVoterReportControl)LoadControl("UserControls/SecurityAddInVoterReportControl.ascx");
+            IPAddressLabel.Text = _voterAnswers.Voters[0].IPSource;
+            VoteDateLabel.Text = _voterAnswers.Voters[0].VoteDate.ToString();
+            VoterEmail.Text = _voterAnswers.Voters[0].IsEmailNull() ? GetPageResource("AnonymousVoteInfo") : _voterAnswers.Voters[0].Email;
+            VoterUserName.Text = _voterAnswers.Voters[0].IsContextUserNameNull() ? GetPageResource("ContextUserNameDisabled") : _voterAnswers.Voters[0].ContextUserName;
+            //VoterLanguageValueLabel.Text = _voterAnswers.Voters[0].IsLanguageCodeNull() || _voterAnswers.Voters[0].LanguageCode.Length == 0 ?  
+            //	GetPageResource("LanguageUndefined") : _voterAnswers.Voters[0].LanguageCode;
+            TimeToTakeSurveyLabel.Text = string.Format("{0} {1}, {2} secs.", timeTaken.Minutes.ToString(), GetPageResource("MinutesInfo"), timeTaken.Seconds.ToString());
 
-					addInVoterControl.AddInDescription = securityAddIns[i].Description;
-					addInVoterControl.AddInVoterData = addInVoterData;
-					AddInVoterDataPlaceHolder.Controls.Add(addInVoterControl);
-				}
-			}
+            WebSecurityAddInCollection securityAddIns = WebSecurityAddInFactory.CreateWebSecurityAddInCollection(new SecurityAddIns().GetWebSecurityAddIns(SurveyId), ViewState, null);
+            NameValueCollection addInVoterData;
+            for (int i = 0; i < securityAddIns.Count; i++)
+            {
+                addInVoterData = securityAddIns[i].GetAddInVoterData(_voterId);
+                if (addInVoterData != null)
+                {
+                    // Creates a new addin voter details page
+                    SecurityAddInVoterReportControl addInVoterControl =
+                        (SecurityAddInVoterReportControl)LoadControl("UserControls/SecurityAddInVoterReportControl.ascx");
 
-			_questionData = new Questions().GetQuestionHierarchy(SurveyId);
-			QuestionsDataGrid.DataSource = GetParentQuestions();
-			QuestionsDataGrid.DataKeyField = "QuestionId";
-			QuestionsDataGrid.DataBind();
-			if (isScored)
-			{
-				//VoterScoreTotalLabel.Text = GetPageResource("VoterScoreTotalLabel") + _totalScore.ToString();
-                VoterScoreTotalLabel.Text =  _totalScore.ToString();
-                VoterAverageScoreLabel.Text = (questionCount != 0) ? (_totalScore / questionCount).ToString("N2") : "";
+                    addInVoterControl.AddInDescription = securityAddIns[i].Description;
+                    addInVoterControl.AddInVoterData = addInVoterData;
+                    AddInVoterDataPlaceHolder.Controls.Add(addInVoterControl);
+                }
             }
-		}
+
+            _questionData = new Questions().GetQuestionHierarchy(SurveyId);
+            QuestionsDataGrid.DataSource = GetParentQuestions();
+            QuestionsDataGrid.DataKeyField = "QuestionId";
+            QuestionsDataGrid.DataBind();
+            if (isScored)
+            {
+                //VoterScoreTotalLabel.Text = GetPageResource("VoterScoreTotalLabel") + _totalScore.ToString();
+                VoterScoreTotalLabel.Text = _totalScore.ToString();
+                VoterAverageScoreLabel.Text = (questionCount != 0) ? (Convert.ToDouble(_totalScore) / questionCount).ToString("N2") : "";
+            }
+        }
 
 		private DataView GetParentQuestions()
 		{

@@ -1221,6 +1221,9 @@
     <Content Include="XmlData\Languages\base.xml" />
     <Content Include="XmlData\Languages\de-DE.xml" />
     <Content Include="XmlData\Languages\de.xml" />
+    <Content Include="XmlData\Languages\vi-VN.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="XmlData\Languages\en-US.xml">
       <SubType>Designer</SubType>
     </Content>
