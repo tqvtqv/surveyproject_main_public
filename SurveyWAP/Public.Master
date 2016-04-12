@@ -56,7 +56,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="default.aspx">
+      <a href="default.aspx">
           <img alt="Brand" src="Images/logo.jpg"/>
       </a>
     </div>
