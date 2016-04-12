@@ -4,7 +4,7 @@
     <div ><img src="Images/banner.jpg" ></img></div>
         
     <div class="col-lg-3" >
-        <div style="background-color:#4dcde8"><img src="Images/icon-bcn.jpg" />Ban Chức Năng</div>
+        <div style="background-color:#4dcde8"><img src="Images/icon-bcn.jpg" /><span class="text-capitalize">Ban Chức Năng</span></div>
         <ul>
             <li>
                 
