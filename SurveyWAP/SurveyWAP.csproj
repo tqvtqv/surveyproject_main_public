@@ -125,6 +125,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="details.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Filemanager\.gitignore" />
     <Content Include="Filemanager\connectors\ashx\filemanager.ashx" />
@@ -1266,6 +1267,9 @@
     <Content Include="XmlData\us.fr.xml" />
     <Content Include="XmlData\us.xml" />
     <Content Include="XmlData\usstates.xml" />
+    <EmbeddedResource Include="details.aspx.resx">
+      <DependentUpon>details.aspx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="default.aspx.resx">
       <DependentUpon>default.aspx.cs</DependentUpon>
     </EmbeddedResource>
@@ -1352,6 +1356,13 @@
     <Compile Include="Code\SyncDataStore.cs" />
     <Compile Include="Code\UINavigator.cs" />
     <Compile Include="Code\UITabList.cs" />
+    <Compile Include="details.aspx.cs">
+      <DependentUpon>details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="details.aspx.designer.cs">
+      <DependentUpon>details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
