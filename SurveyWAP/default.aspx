@@ -5,13 +5,13 @@
         
     <div class="col-lg-3" >
         <div style="background-color:#4dcde8"><img src="Images/icon-bcn.jpg" /><span class="text-capitalize">Ban Chức Năng</span></div>
-        <ul>
+        <ul>  
             <li>
                 
             </li>
         </ul>
     </div>
-    
+    <%--dsd--%>
     <div class="col-lg-3" >
         <div style="background-color:#f8901f"><img src="Images/icon-vnptTinhTp.jpg" />VNPT Tỉnh/TP</div>
          <ul>
