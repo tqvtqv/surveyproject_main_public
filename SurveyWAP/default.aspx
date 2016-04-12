@@ -4,7 +4,7 @@
     <div ><img src="Images/banner.jpg" ></img></div>
         
     <div class="col-lg-3" >
-        <div style="background-color:aqua"><img src="Images/icon-bcn.jpg" />Ban Chức Năng</div>
+        <div style="background-color:#4dcde8"><img src="Images/icon-bcn.jpg" />Ban Chức Năng</div>
         <ul>
             <li>
                 
@@ -13,7 +13,7 @@
     </div>
     
     <div class="col-lg-3" >
-        <div style="background-color:coral"><img src="Images/icon-vnptTinhTp.jpg" />VNPT Tỉnh/TP</div>
+        <div style="background-color:#f8901f"><img src="Images/icon-vnptTinhTp.jpg" />VNPT Tỉnh/TP</div>
          <ul>
             <li>
                 
@@ -21,7 +21,7 @@
         </ul>
     </div>
     <div class="col-lg-3" >
-        <div style="background-color:chartreuse"><img src="Images/icon-ctydoc.jpg" />Công ty dọc</div>
+        <div style="background-color:#56c253"><img src="Images/icon-ctydoc.jpg" />Công ty dọc</div>
         <ul>
             <li>
                 
@@ -29,7 +29,7 @@
         </ul>
     </div>
     <div class="col-lg-3" >
-        <div style="background-color:fuchsia"><img src="Images/icon-ttkd.jpg" />TTKD VNPT Tỉnh/TP</div>
+        <div style="background-color:#d2469f"><img src="Images/icon-ttkd.jpg" />TTKD VNPT Tỉnh/TP</div>
         <ul>
             <li>
                 
