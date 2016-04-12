@@ -39,6 +39,22 @@ namespace Votations.NSurvey.SQLServerDAL
             DbConnection.db.UpdateDataSet(newUser, "Users", insertCommand, new SqlCommand(), new SqlCommand(), UpdateBehavior.Transactional);
         }
 
+        public void AddUser(NSurveyUserData newUser, string group, string parentGroup)
+        {
+            AddUser(newUser);
+            if(newUser.Users[0].UserId > 0) {
+                SqlConnection connection = new SqlConnection(DbConnection.NewDbConnectionString);
+                SqlCommand insertCommand = new SqlCommand("vts_spUserAddNewGroup", connection);
+                insertCommand.CommandType = CommandType.StoredProcedure;
+                insertCommand.Parameters.AddWithValue("@UserId", newUser.Users[0].UserId);
+                insertCommand.Parameters.AddWithValue("@Group", group);
+                insertCommand.Parameters.AddWithValue("@ParentGroup", parentGroup);
+                DbConnection.db.ExecuteNonQuery(insertCommand);
+                //DbConnection.db.UpdateDataSet(newUser, "Users", insertCommand, new SqlCommand(), new SqlCommand(), UpdateBehavior.Transactional);
+            }
+            
+        }
+
         /// <summary>
         /// Adds a new users settings to the database
         /// </summary>
@@ -50,7 +66,6 @@ namespace Votations.NSurvey.SQLServerDAL
             insertCommand.Parameters.Add(new SqlParameter("@UserId", SqlDbType.Int, 4, "UserId"));
             insertCommand.Parameters.Add(new SqlParameter("@IsAdmin", SqlDbType.Bit, 1, "IsAdmin"));
             insertCommand.Parameters.Add(new SqlParameter("@GlobalSurveyAccess", SqlDbType.Bit, 1, "GlobalSurveyAccess"));
-
             DbConnection.db.UpdateDataSet(newUserSettings, "UserSettings", insertCommand, new SqlCommand(), new SqlCommand(), UpdateBehavior.Transactional);
         }
 

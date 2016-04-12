@@ -31,13 +31,13 @@ namespace Votations.NSurvey.WebAdmin.NSurveyAdmin {
         protected global::System.Web.UI.WebControls.Literal literalADGroupTitle;
         
         /// <summary>
-        /// lblGenerateCountPrompt control.
+        /// lblAdGroupNamePrompt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblGenerateCountPrompt;
+        protected global::System.Web.UI.WebControls.Label lblAdGroupNamePrompt;
         
         /// <summary>
         /// txtAdGroupName control.

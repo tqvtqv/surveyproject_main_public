@@ -108,7 +108,7 @@ namespace Votations.NSurvey.WebAdmin.NSurveyAdmin
             var ou = txtAdGroupName.Text.Trim();
             var ldapHelper = LDAPFactory.Create();
             var results = ldapHelper.SearchOU(ou);
-            if (results.Count() > 0)
+            if (results != null && results.Count() > 0)
             {
                 var list = results.Select(x => new SurveyADGroupDetail { });
                 new Survey().AddADGroupMultiple(results.Select(x => new SurveyADGroupDetail

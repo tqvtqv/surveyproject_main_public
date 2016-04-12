@@ -146,5 +146,14 @@ namespace Votations.NSurvey.WebAdmin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Votations.NSurvey.WebAdmin.NSurveyAdmin.UserControls.UserImport userImport;
+        
+        /// <summary>
+        /// userImport1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Votations.NSurvey.WebAdmin.NSurveyAdmin.UserControls.UserImportExcel userImport1;
     }
 }

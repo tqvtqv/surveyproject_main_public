@@ -53,6 +53,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Library\CKEditor.NET.dll</HintPath>
     </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenXMLSDK-MOT.2.6.0.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DotNetCasClient, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetCasClient.1.0.2\lib\net20\DotNetCasClient.dll</HintPath>
       <Private>True</Private>
@@ -68,8 +72,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\itextsharp.xtra.5.5.2\lib\itextsharp.xtra.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -82,12 +86,20 @@
       <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="OpenXmlPowerTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenXmlPowerTools.4.1.3\lib\OpenXmlPowerTools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Design" />
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.identitymodel.services" />
+    <Reference Include="System.IO.Packaging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenXMLSDK-MOT.2.6.0.0\lib\System.IO.Packaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
@@ -113,7 +125,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Filemanager\.gitignore" />
     <Content Include="Filemanager\connectors\ashx\filemanager.ashx" />
@@ -278,10 +289,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="HttpErrorPage.aspx" />
     <Content Include="Images\arrow-down.gif" />
     <Content Include="Images\arrow-green-up.gif" />
@@ -290,6 +298,7 @@
     <Content Include="Images\arrow_down.gif" />
     <Content Include="Images\arrow_up.gif" />
     <Content Include="Images\back_button.gif" />
+    <Content Include="Images\banner.jpg" />
     <Content Include="Images\Bar\BarOff.gif" />
     <Content Include="Images\Bar\BarOn_Black.gif" />
     <Content Include="Images\Bar\BarOn_Blue.gif" />
@@ -311,10 +320,15 @@
     <Content Include="Images\email.png" />
     <Content Include="Images\help.gif" />
     <Content Include="Images\help.png" />
+    <Content Include="Images\icon-bcn.jpg" />
+    <Content Include="Images\icon-ctydoc.jpg" />
+    <Content Include="Images\icon-ttkd.jpg" />
+    <Content Include="Images\icon-vnptTinhTp.jpg" />
     <Content Include="Images\index-icon.png" />
     <Content Include="Images\inet.png" />
     <Content Include="Images\layout.png" />
     <Content Include="Images\lock.gif" />
+    <Content Include="Images\logo.jpg" />
     <Content Include="Images\menuseparator.gif" />
     <Content Include="Images\NegativeRatingBar.gif" />
     <Content Include="Images\PenSurvey.JPG" />
@@ -330,12 +344,11 @@
     <Content Include="Images\submenuseparator.gif" />
     <Content Include="Images\surveys.png" />
     <Content Include="Images\tools.png" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
     <Content Include="Images\view.png" />
     <Content Include="Images\vnpt_logo.png" />
     <Content Include="Images\warning-icn.png" />
     <Content Include="Images\yellowwarning_16px.gif" />
+    <Content Include="default.aspx" />
     <Content Include="NSurveyAdmin\AccessDenied.aspx" />
     <Content Include="NSurveyAdmin\AjaxWebMethodsProxy.aspx" />
     <Content Include="NSurveyAdmin\BarChartReport.aspx" />
@@ -348,6 +361,8 @@
     <Content Include="NSurveyAdmin\CSS\surveymobile.css" />
     <Content Include="NSurveyAdmin\CSS\surveypreview.css" />
     <Content Include="NSurveyAdmin\CSS\voterreport.css" />
+    <Content Include="NSurveyAdmin\UserControls\UserImportExcel.ascx" />
+    <Content Include="NSurveyAdmin\UserImportExcel.aspx" />
     <Content Include="NSurveyAdmin\VNPTItemReport.aspx" />
     <Content Include="NSurveyAdmin\VNPTGroupReport.aspx" />
     <Content Include="NSurveyAdmin\FilterCreator.aspx" />
@@ -1169,6 +1184,9 @@
     <Content Include="Scripts\Javascript\ui\jquery.ui.position.js" />
     <Content Include="Scripts\Javascript\ui\jquery.ui.tabs.js" />
     <Content Include="Scripts\Javascript\ui\jquery.ui.widget.js" />
+    <None Include="Scripts\jquery-2.2.2.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.2.js" />
+    <Content Include="Scripts\jquery-2.2.2.min.js" />
     <Content Include="Scripts\js\jquery.ui.datepicker-de-de.js" />
     <Content Include="Scripts\js\jquery.ui.datepicker-de-CH.js" />
     <Content Include="Scripts\js\jquery.ui.datepicker-en-us.js" />
@@ -1248,8 +1266,14 @@
     <Content Include="XmlData\us.fr.xml" />
     <Content Include="XmlData\us.xml" />
     <Content Include="XmlData\usstates.xml" />
+    <EmbeddedResource Include="default.aspx.resx">
+      <DependentUpon>default.aspx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NSurveyAdmin\EditMatrixQuestion.aspx.resx">
       <DependentUpon>EditMatrixQuestion.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSurveyAdmin\UserImportExcel.aspx.resx">
+      <DependentUpon>UserImportExcel.aspx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NSurveyAdmin\VNPTItemReport.aspx.resx">
       <DependentUpon>VNPTItemReport.aspx.cs</DependentUpon>
@@ -1338,6 +1362,13 @@
     <Compile Include="HttpErrorPage.aspx.designer.cs">
       <DependentUpon>HttpErrorPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NSurveyAdmin\AccessDenied.aspx.cs">
       <DependentUpon>AccessDenied.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1379,6 +1410,20 @@
     </Compile>
     <Compile Include="NSurveyAdmin\ControlCode.aspx.designer.cs">
       <DependentUpon>ControlCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NSurveyAdmin\UserControls\UserImportExcel.ascx.cs">
+      <DependentUpon>UserImportExcel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSurveyAdmin\UserControls\UserImportExcel.ascx.designer.cs">
+      <DependentUpon>UserImportExcel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NSurveyAdmin\UserImportExcel.aspx.cs">
+      <DependentUpon>UserImportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSurveyAdmin\UserImportExcel.aspx.designer.cs">
+      <DependentUpon>UserImportExcel.aspx</DependentUpon>
     </Compile>
     <Compile Include="NSurveyAdmin\VNPTItemReport.aspx.cs">
       <DependentUpon>VNPTItemReport.aspx</DependentUpon>
@@ -2243,8 +2288,17 @@
     <Content Include="NSurveyAdmin\Images\images_list.json" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\Vnpt_Survey.pubxml" />
     <Content Include="Public.Master" />
+    <Content Include="Scripts\jquery-2.2.2.min.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

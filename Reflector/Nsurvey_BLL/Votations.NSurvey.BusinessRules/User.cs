@@ -17,7 +17,10 @@ namespace Votations.NSurvey.BusinessRules
         {
             UserFactory.Create().AddUser(newUser);
         }
-
+        public void AddUser(NSurveyUserData newUser, string group, string parentGroup)
+        {
+            UserFactory.Create().AddUser(newUser, group, parentGroup);
+        }
         /// <summary>
         /// Add users settings
         /// </summary>
@@ -25,6 +28,8 @@ namespace Votations.NSurvey.BusinessRules
         {
             UserFactory.Create().AddUserSettings(newUserSettings);
         }
+
+        
 
         /// <summary>
         /// Deletes the user from the db

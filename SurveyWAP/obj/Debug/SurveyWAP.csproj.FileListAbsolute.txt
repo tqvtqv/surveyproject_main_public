@@ -434,3 +434,8 @@ D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\SurveyWAP.csproj.GenerateReso
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.dll.licenses
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.dll
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.pdb
+D:\Work\Projects\surveyproject\SurveyWAP\bin\DocumentFormat.OpenXml.dll
+D:\Work\Projects\surveyproject\SurveyWAP\bin\OpenXmlPowerTools.dll
+D:\Work\Projects\surveyproject\SurveyWAP\bin\System.IO.Packaging.dll
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.UserImportExcel.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.default.resources

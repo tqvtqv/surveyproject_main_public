@@ -9,6 +9,7 @@ namespace Votations.NSurvey.IDAL
     public interface IUser
     {
         void AddUser(NSurveyUserData newUser);
+        void AddUser(NSurveyUserData newUser, string group, string parentGroup);
         void AddUserSettings(UserSettingData newSettings);
         void DeleteUserById(int userId);
         int GetAdminCount();

@@ -92,7 +92,7 @@
                
             </td></tr></table>
                       
-                      <asp:button id="ImportUsersButton" runat="server" Text="Import users"></asp:button>
+                      <asp:Button ID="ImportUsersButton" runat="server" Text="Import users"></asp:Button>
                       </td></tr>
 </table>
 </div></div></asp:Content>

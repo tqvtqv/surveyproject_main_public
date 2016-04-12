@@ -19,6 +19,10 @@ namespace Votations.NSurvey.UserProvider
         {
             new User().AddUser(newUser);
         }
+        public void AddUser(NSurveyUserData newUser, string group, string parentGroup)
+        {
+            new User().AddUser(newUser, group, parentGroup);
+        }
 
         /// <summary>
         /// Creates a new principal based on the provided username
@@ -71,6 +75,8 @@ namespace Votations.NSurvey.UserProvider
         {
             new User().UpdateUser(updatedUser);
         }
+
+        
 
         /// <summary>
         /// Did the user disable / enable authentication 

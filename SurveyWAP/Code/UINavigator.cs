@@ -94,6 +94,7 @@ namespace Votations.NSurvey.WebAdmin
         public static readonly string TakeSurveyHyperLink = AdminRoot + "/TakeSurvey.aspx";
         public static readonly string RegExEditorHyperLink = AdminRoot + "/EditRegEx.aspx";
         public static readonly string ImportUsersHyperLink = AdminRoot + "/UsersManager.aspx?tabindex=2";
+        public static readonly string ImportUserMatrixHyperLink = AdminRoot + "/UsersManager.aspx?tabindex=3";
         public static readonly string FileManagerHyperLink = AdminRoot + "/FileManager.aspx";
         public static readonly string MailingLogHyperLink = AdminRoot + "/MailingLog.aspx";
         public static readonly string MultiLanguagesHyperLink = AdminRoot + "/MultiLanguages.aspx";
@@ -231,7 +232,7 @@ namespace Votations.NSurvey.WebAdmin
             else if (user.Identity.IsAdmin || user.HasRight(NSurveyRights.AccessStats))
                 destURL = string.Format("{0}?surveyid={1}&menuindex={2}", SurveyStats, surveyId, (int)NavigationMenuItems.SurveyStats);
             else if (user.Identity.IsAdmin || user.HasRight(NSurveyRights.AccessReports))
-                destURL = string.Format("{0}?surveyid={1}&menuindex={2}", ResultsReportHyperlink, surveyId, (int)NavigationMenuItems.ResultsReport);
+                destURL = string.Format("{0}?surveyid={1}&menuindex={2}", VNPTGroupReportHyperlink, surveyId, (int)NavigationMenuItems.ResultsReport);
             else if (user.Identity.IsAdmin || user.HasRight(NSurveyRights.AccessSurveySettings))
                 destURL = string.Format("{0}?surveyid={1}&menuindex={2}", SurveyOptionsLink, surveyId, (int)NavigationMenuItems.SurveyOptions);
             else if (user.Identity.IsAdmin || user.HasRight(NSurveyRights.CreateSurvey))

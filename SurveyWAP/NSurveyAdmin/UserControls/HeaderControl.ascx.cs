@@ -1,4 +1,4 @@
-/**************************************************************************************************
+﻿/**************************************************************************************************
 	Survey changes: copyright (c) 2010, Fryslan Webservices TM (http://survey.codeplex.com)	
 
 	NSurvey - The web survey and form engine
@@ -291,6 +291,7 @@ namespace Votations.NSurvey.WebAdmin.UserControls
                 mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem(((PageBase)Page).GetPageResource("RolesManagerHyperlink"), null, null, string.Format("{0}&surveyid={1}", UINavigator.RolesManagerHyperLink, SurveyId)));
 
                 mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem(((PageBase)Page).GetPageResource("ImportUsersHyperlink"), null, null, string.Format("{0}&surveyid={1}", UINavigator.ImportUsersHyperLink, SurveyId)));
+                mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem("Import ma trận người dùng", null, null, string.Format("{0}&surveyid={1}", UINavigator.ImportUserMatrixHyperLink, SurveyId)));
 
                 menuIndex++;
             }

@@ -10,6 +10,7 @@ namespace Votations.NSurvey.UserProvider
     public interface INSurveyUserProvider : IUserProvider
     {
         void AddUser(NSurveyUserData newUser);
+        void AddUser(NSurveyUserData newUser, string group, string parentGroup);
         void DeleteUserById(int userId);
         int GetUserByIdFromUserName(string userName);
         void UpdateUser(NSurveyUserData updatedUser);

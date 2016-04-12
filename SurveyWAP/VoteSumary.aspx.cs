@@ -111,7 +111,7 @@ namespace Votations.NSurvey.WebAdmin
 
 		private void SetupSecurity()
 		{
-			CheckRight(NSurveyRights.AccessFieldEntries, true);
+			CheckRight(NSurveyRights.TakeSurvey, true);
             EditAnswersLinkButton.Visible = false;// CheckRight(NSurveyRights.EditVoterEntries, false);
 		}
 

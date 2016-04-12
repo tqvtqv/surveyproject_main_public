@@ -24,7 +24,7 @@
               <br />
                       <ol>
      <li>
-                <asp:Label ID="lblGenerateCountPrompt" AssociatedControlID="txtNumTokens" runat="server" Text="Nhập tên đơn vị:" />&nbsp;&nbsp;
+                <asp:Label ID="lblAdGroupNamePrompt" AssociatedControlID="txtAdGroupName" runat="server" Text="Nhập tên đơn vị:" />&nbsp;&nbsp;
                 <asp:TextBox runat="server" ID="txtAdGroupName"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button runat="server" ID="btnAddADGroup" Text="Thêm" CssClass="btn btn-primary btn-xs bw"
                     OnClick="btnAddADGroup_Click" /><br />
@@ -55,17 +55,14 @@
                                     <asp:CheckBox ID="chkDelete" runat="server" />
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtCreationDate" ReadOnly="true" Text='<%#Eval("CreationDate","{0:d}")%>'
+                                    <asp:TextBox ID="txtCreationDate" ReadOnly="true" Text='<%#Eval("GroupName","{0:d}")%>'
                                         runat="server"> </asp:TextBox>
                                 </td>
                                 <td>
-                                    <asp:TextBox Width="190px" ID="txtToken" ReadOnly="true" Text='<%#Eval("Token")%>'
+                                    <asp:TextBox Width="190px" ID="txtToken" ReadOnly="true" Text='<%#Eval("FilterPhase")%>'
                                         runat="server"> </asp:TextBox>
                                 </td>
-                                <td>
-                                    <asp:TextBox Width="12px" ID="chkUsed" ReadOnly="true"  BackColor='<%#((bool)Eval("Used"))? System.Drawing.Color.Red : System.Drawing.Color.Green%>'
-                                        runat="server"></asp:TextBox>
-                                </td>
+                                
                             </table>
                         </td>
                     </ItemTemplate>

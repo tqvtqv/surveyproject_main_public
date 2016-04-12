@@ -6,6 +6,7 @@
 <%@ Register TagPrefix="uc1" TagName="UsersOptionsControl" Src="UserControls/UsersOptionsControl.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="RolesManager" Src="UserControls/RolesManager.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="UserImport" Src="UserControls/UserImport.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="UserImportMatrix" Src="UserControls/UserImportExcel.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -49,6 +50,7 @@
                 <%=GetPageResource("RolesTab")%></a></li>
             <li><a href="#tabs-3">
                 <%=GetPageResource("ImportUsersTab")%></a></li>
+            <li><a href="#tabs-4">Import ma trận người dùng</a></li>
         </ul>
 
 <div style="position: absolute; width: 50px; text-align: center; margin-left: 700px; top: 55px; z-index: 1;">
@@ -172,6 +174,9 @@
 
         <div id="tabs-3">
             <uc1:UserImport ID="userImport" runat="server"></uc1:UserImport>
+        </div>
+            <div id="tabs-4">
+            <uc1:UserImportMatrix ID="userImport1" runat="server"></uc1:UserImportMatrix>
         </div>
             </div></div>
     </div>

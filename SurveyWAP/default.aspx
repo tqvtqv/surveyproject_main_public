@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" MasterPageFile="Wap.Master" ValidateRequest="true" AutoEventWireup="false" Inherits="Votations.NSurvey.WebAdmin.Login" Codebehind="~/nsurveyadmin/Login.aspx.cs" %>
+﻿<%@ Page language="c#" MasterPageFile="Public.Master" ValidateRequest="true" AutoEventWireup="false" Inherits="Votations.NSurvey.default" Codebehind="~/default.aspx.cs" %>
 
 <asp:content id="Content1" contentplaceholderid="ContentPlaceHolder1" runat="Server">
 
