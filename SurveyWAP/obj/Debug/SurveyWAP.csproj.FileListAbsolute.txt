@@ -332,6 +332,7 @@ D:\Work\Projects\surveyproject\SurveyWAP\bin\Votations.NSurvey.WebAdmin.dll.conf
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Votations.NSurvey.WebAdmin.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Votations.NSurvey.WebAdmin.pdb
 D:\Work\Projects\surveyproject\SurveyWAP\bin\CKEditor.NET.dll
+D:\Work\Projects\surveyproject\SurveyWAP\bin\DocumentFormat.OpenXml.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\DotNetCasClient.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Goldtect.ASTreeView.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\itextsharp.dll
@@ -339,6 +340,8 @@ D:\Work\Projects\surveyproject\SurveyWAP\bin\itextsharp.xtra.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\log4net.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Work\Projects\surveyproject\SurveyWAP\bin\OpenXmlPowerTools.dll
+D:\Work\Projects\surveyproject\SurveyWAP\bin\System.IO.Packaging.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Votations.NSurvey.BE.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Votations.NSurvey.BLL.dll
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Votations.NSurvey.DAL.dll
@@ -361,7 +364,11 @@ D:\Work\Projects\surveyproject\SurveyWAP\bin\log4net.xml
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
 D:\Work\Projects\surveyproject\SurveyWAP\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\SurveyWAP.csprojResolveAssemblyReference.cache
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.details.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.default.resources
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.EditMatrixQuestion.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.UserControls.GroupManager.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.UserImportExcel.resources
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.VNPTItemReport.resources
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.VNPTGroupReport.resources
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.FilterCreator.resources
@@ -434,8 +441,5 @@ D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\SurveyWAP.csproj.GenerateReso
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.dll.licenses
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.dll
 D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.pdb
-D:\Work\Projects\surveyproject\SurveyWAP\bin\DocumentFormat.OpenXml.dll
-D:\Work\Projects\surveyproject\SurveyWAP\bin\OpenXmlPowerTools.dll
-D:\Work\Projects\surveyproject\SurveyWAP\bin\System.IO.Packaging.dll
-D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.UserImportExcel.resources
-D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.default.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.SurveyGroup.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.UserControls.SurveyGroupControl.resources

@@ -46,6 +46,7 @@ namespace Votations.NSurvey.WebAdmin
         public static readonly string EditMatrixQuestionLink = AdminRoot + "/editmatrixquestion.aspx";
         public static readonly string SurveyOptionsLink = AdminRoot + "/surveyoptions.aspx";
         public static readonly string SurveyPrivacyLink = AdminRoot + "/surveyprivacy.aspx";
+        public static readonly string SurveyGroupLink = AdminRoot + "/surveygroup.aspx";
         public static readonly string SurveyLayoutLink = AdminRoot + "/SurveyLayout.aspx";
         public static readonly string SurveySecurityLink = AdminRoot + "/surveysecurity.aspx";
         public static readonly string SurveyTokenSecurityLink = AdminRoot + "/SurveyTokenSecurity.aspx";
@@ -78,7 +79,8 @@ namespace Votations.NSurvey.WebAdmin
         public static readonly string MessageConditionEditorHyperLink = AdminRoot + "/ConditionalEndMessage.aspx";
         public static readonly string LibraryDirectoryHyperLink = AdminRoot + "/LibraryDirectory.aspx";
         public static readonly string LibraryCreateHyperLink = AdminRoot + "/LibraryDirectory.aspx?tabindex=1";
-        public static readonly string UsersManagerHyperLink = AdminRoot + "/UsersManager.aspx";
+        public static readonly string UsersManagerHyperLink = AdminRoot + "/UsersManager.aspx"; 
+        
         public static readonly string UserCreatorHyperLink = AdminRoot + "/UserCreator.aspx";
         public static readonly string RolesManagerHyperLink = AdminRoot + "/UsersManager.aspx?tabindex=1";
         public static readonly string AccessDeniedHyperLink = AdminRoot + "/AccessDenied.aspx";
@@ -94,7 +96,8 @@ namespace Votations.NSurvey.WebAdmin
         public static readonly string TakeSurveyHyperLink = AdminRoot + "/TakeSurvey.aspx";
         public static readonly string RegExEditorHyperLink = AdminRoot + "/EditRegEx.aspx";
         public static readonly string ImportUsersHyperLink = AdminRoot + "/UsersManager.aspx?tabindex=2";
-        public static readonly string ImportUserMatrixHyperLink = AdminRoot + "/UsersManager.aspx?tabindex=3";
+        public static readonly string GroupManagerHyperLink = AdminRoot + "/UsersManager.aspx?tabindex=3";
+        public static readonly string ImportUserMatrixHyperLink = AdminRoot + "/UsersManager.aspx?tabindex=4";
         public static readonly string FileManagerHyperLink = AdminRoot + "/FileManager.aspx";
         public static readonly string MailingLogHyperLink = AdminRoot + "/MailingLog.aspx";
         public static readonly string MultiLanguagesHyperLink = AdminRoot + "/MultiLanguages.aspx";

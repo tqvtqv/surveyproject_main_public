@@ -121,6 +121,7 @@ namespace Votations.NSurvey.WebAdmin
             masterPage.DisplayTabs.Add(ResourceManager.GetString("SurveyInfo"), UINavigator.SurveyOptionsLink);
             masterPage.DisplayTabs.Add(ResourceManager.GetString("SurveyInfoMultiLanguage"), UINavigator.MultiLanguagesHyperLink);
             masterPage.DisplayTabs.Add(ResourceManager.GetString("SurveyInfoCompletion"), UINavigator.SurveyPrivacyLink);
+            masterPage.DisplayTabs.Add("Survey group", UINavigator.SurveyGroupLink);
 
             masterPage.selectedTabIndex = (int)selectedTab;
         }

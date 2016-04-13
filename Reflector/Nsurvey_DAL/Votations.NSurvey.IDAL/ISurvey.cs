@@ -89,6 +89,8 @@ namespace Votations.NSurvey.IDAL
         void AddADGroupMultiple(IEnumerable<SurveyADGroupDetail> enumerable);
         void SetFriendlyName(int surveyId, string friendlyName);
         void DeleteAdGroupDetails(IEnumerable<int> deleteCandidates);
+        DataSet GetSurveyGroup(int surveyId);
+        int UpdateSurveyGroup(DataRow row);
     }
 }
 

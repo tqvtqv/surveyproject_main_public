@@ -14,9 +14,6 @@
     <br />
             <asp:Label ID="ImportUserLabel" AssociatedControlID="ImportUserMatrixFile" runat="server" EnableViewState="False">Chọn file excel: </asp:Label>
             <asp:FileUpload ID="ImportUserMatrixFile" runat="server" AllowMultiple="false" accept="excel/xlsx"  />
-                <asp:RequiredFieldValidator ControlToValidate="ImportUserMatrixFile"  runat="server" 
-                    CssClass="ErrorMessage"
-                    ErrorMessage="Chưa chọn file" ></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="uplValidator" runat="server" 
                     ControlToValidate="ImportUserMatrixFile"
                     CssClass="ErrorMessage"

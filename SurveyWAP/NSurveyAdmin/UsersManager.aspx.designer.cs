@@ -148,12 +148,21 @@ namespace Votations.NSurvey.WebAdmin {
         protected global::Votations.NSurvey.WebAdmin.NSurveyAdmin.UserControls.UserImport userImport;
         
         /// <summary>
-        /// userImport1 control.
+        /// groupMngr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Votations.NSurvey.WebAdmin.NSurveyAdmin.UserControls.UserImportExcel userImport1;
+        protected global::Votations.NSurvey.WebAdmin.UserControls.GroupManager groupMngr;
+        
+        /// <summary>
+        /// userImportMatrix control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Votations.NSurvey.WebAdmin.NSurveyAdmin.UserControls.UserImportExcel userImportMatrix;
     }
 }

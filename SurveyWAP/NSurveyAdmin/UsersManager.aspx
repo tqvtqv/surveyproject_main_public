@@ -6,6 +6,7 @@
 <%@ Register TagPrefix="uc1" TagName="UsersOptionsControl" Src="UserControls/UsersOptionsControl.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="RolesManager" Src="UserControls/RolesManager.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="UserImport" Src="UserControls/UserImport.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="GroupMngr" Src="UserControls/GroupManager.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="UserImportMatrix" Src="UserControls/UserImportExcel.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -50,7 +51,8 @@
                 <%=GetPageResource("RolesTab")%></a></li>
             <li><a href="#tabs-3">
                 <%=GetPageResource("ImportUsersTab")%></a></li>
-            <li><a href="#tabs-4">Import ma trận người dùng</a></li>
+            <li><a href="#tabs-4">Danh sách đơn vị</a></li>
+            <li><a href="#tabs-5">Import ma trận người dùng</a></li>
         </ul>
 
 <div style="position: absolute; width: 50px; text-align: center; margin-left: 700px; top: 55px; z-index: 1;">
@@ -102,7 +104,7 @@
                 </table><br />
 
                    <div class="rounded_corners">
-                <asp:GridView runat="server" Width="100%" ID="gvUsers" AutoGenerateColumns="False" AllowPaging="true"
+                <asp:GridView runat="server" Width="100%" ID="gvUsers" AutoGenerateColumns="False" AllowPaging="true" EnableViewState="true"
                     OnPageIndexChanged="gvUsers_PageIndexChanged" OnPageIndexChanging="gvUsers_PageIndexChanging"
                     PageSize="20" AlternatingRowStyle-BackColor="#FFF6BB" ShowFooter="True" FooterStyle-BackColor="#FFDF12" FooterStyle-BorderStyle="None" FooterStyle-BorderColor="#E2E2E2">
                     
@@ -117,7 +119,7 @@
                                 <asp:Label runat="server" ID="lbl1" Text='<%#GetPageResource("UsersTabUserName") %>' /></HeaderTemplate>
                             <ItemTemplate>
                          <!--       <asp:Label runat="server" Text='<%#(Eval("UserName")) %>' /> -->
-                             <asp:LinkButton Text='<%#(Eval("UserName")) %>' runat="server" ToolTip="Edit User" OnCommand="OnUserEdit"
+                             <asp:LinkButton Text='<%#(Eval("UserName")) %>' runat="server" ToolTip="Edit User"  OnCommand="OnUserEdit"
                                     CommandName="UserEdit" CommandArgument='<%#(Eval("UserId")) %>' CssClass="hyperlink" />
                                 
                                 </ItemTemplate>
@@ -176,7 +178,10 @@
             <uc1:UserImport ID="userImport" runat="server"></uc1:UserImport>
         </div>
             <div id="tabs-4">
-            <uc1:UserImportMatrix ID="userImport1" runat="server"></uc1:UserImportMatrix>
+            <uc1:GroupMngr ID="groupMngr" runat="server"></uc1:GroupMngr>
+        </div>
+            <div id="tabs-5">
+            <uc1:UserImportMatrix ID="userImportMatrix" runat="server"></uc1:UserImportMatrix>
         </div>
             </div></div>
     </div>
