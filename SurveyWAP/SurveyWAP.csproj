@@ -332,6 +332,7 @@
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\menuseparator.gif" />
     <Content Include="Images\NegativeRatingBar.gif" />
+    <Content Include="Images\NewBanner.png" />
     <Content Include="Images\PenSurvey.JPG" />
     <Content Include="Images\PositiveRatingBar.gif" />
     <Content Include="Images\Print_32X32_Standard.png" />

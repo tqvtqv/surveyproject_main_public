@@ -43,3 +43,14 @@ D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\bin\Debug\Votation
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\obj\Debug\Votations.NSurvey.UserProvider.csprojResolveAssemblyReference.cache
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\obj\Debug\Votations.NSurvey.UserProvider.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_UserProvider\obj\Debug\Votations.NSurvey.UserProvider.pdb
+D:\GitHub\Reflector\Nsurvey_UserProvider\obj\Debug\Votations.NSurvey.UserProvider.csprojResolveAssemblyReference.cache
+D:\GitHub\Reflector\Nsurvey_UserProvider\bin\Debug\Votations.NSurvey.UserProvider.dll
+D:\GitHub\Reflector\Nsurvey_UserProvider\bin\Debug\Votations.NSurvey.UserProvider.pdb
+D:\GitHub\Reflector\Nsurvey_UserProvider\bin\Debug\Votations.NSurvey.BE.dll
+D:\GitHub\Reflector\Nsurvey_UserProvider\bin\Debug\Votations.NSurvey.BLL.dll
+D:\GitHub\Reflector\Nsurvey_UserProvider\bin\Debug\Votations.NSurvey.DAL.dll
+D:\GitHub\Reflector\Nsurvey_UserProvider\bin\Debug\Votations.NSurvey.BE.pdb
+D:\GitHub\Reflector\Nsurvey_UserProvider\bin\Debug\Votations.NSurvey.BLL.pdb
+D:\GitHub\Reflector\Nsurvey_UserProvider\bin\Debug\Votations.NSurvey.DAL.pdb
+D:\GitHub\Reflector\Nsurvey_UserProvider\obj\Debug\Votations.NSurvey.UserProvider.dll
+D:\GitHub\Reflector\Nsurvey_UserProvider\obj\Debug\Votations.NSurvey.UserProvider.pdb

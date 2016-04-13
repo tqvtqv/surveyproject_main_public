@@ -35,3 +35,12 @@ D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.csprojResolveAssemblyReference.cache
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.pdb
+D:\GitHub\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.BLL.dll
+D:\GitHub\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.BLL.pdb
+D:\GitHub\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.BE.dll
+D:\GitHub\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.DAL.dll
+D:\GitHub\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.BE.pdb
+D:\GitHub\Reflector\Nsurvey_BLL\bin\Debug\Votations.NSurvey.DAL.pdb
+D:\GitHub\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.csprojResolveAssemblyReference.cache
+D:\GitHub\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.dll
+D:\GitHub\Reflector\Nsurvey_BLL\obj\Debug\Votations.NSurvey.BLL.pdb

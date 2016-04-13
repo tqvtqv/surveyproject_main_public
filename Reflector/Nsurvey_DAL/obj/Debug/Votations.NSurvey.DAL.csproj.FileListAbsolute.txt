@@ -27,3 +27,10 @@ D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\bin\Debug\Votations.NSurvey
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\obj\Debug\Votations.NSurvey.DAL.csprojResolveAssemblyReference.cache
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\obj\Debug\Votations.NSurvey.DAL.dll
 D:\Work\Projects\surveyproject\Reflector\Nsurvey_DAL\obj\Debug\Votations.NSurvey.DAL.pdb
+D:\GitHub\Reflector\Nsurvey_DAL\bin\Debug\Votations.NSurvey.DAL.dll
+D:\GitHub\Reflector\Nsurvey_DAL\bin\Debug\Votations.NSurvey.DAL.pdb
+D:\GitHub\Reflector\Nsurvey_DAL\bin\Debug\Votations.NSurvey.BE.dll
+D:\GitHub\Reflector\Nsurvey_DAL\bin\Debug\Votations.NSurvey.BE.pdb
+D:\GitHub\Reflector\Nsurvey_DAL\obj\Debug\Votations.NSurvey.DAL.csprojResolveAssemblyReference.cache
+D:\GitHub\Reflector\Nsurvey_DAL\obj\Debug\Votations.NSurvey.DAL.dll
+D:\GitHub\Reflector\Nsurvey_DAL\obj\Debug\Votations.NSurvey.DAL.pdb

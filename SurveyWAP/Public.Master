@@ -77,14 +77,20 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-        <form id="form1" runat="server">
-    <div>
+    <form id="form1" runat="server">
+    <div class="container-fluid">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    </div>
+    </div>   
     </form>
+                    <div style="background-color:gainsboro;height:60px;text-align:center;vertical-align:middle">
+            Tập đoàn bưu chính viễn thông Việt Nam.
+                        <br />
+                        Tòa nhà VNPT, Số 57 Huỳnh Thúc Kháng, quận Đống Đa, Hà Nội. Bản quyền nội dung thuộc VNPT,xây dựng,triển khai bởi TTCNTT-VNPTNET.
+
+
+        </div>    
     </div>
 </body>
-
-</html>
+    </html>
