@@ -133,7 +133,101 @@ namespace Votations.NSurvey.SQLServerDAL
             return dataSet;
         }
 
-       /// <summary>
+        public DataSet GetChildGroups(int? parentId)
+        {
+            DataSet dataSet = new DataSet();
+
+            SqlCommand command = new SqlCommand();
+            if (parentId.HasValue)
+            {
+                command.CommandText = "Select * From vts_tbGroup Where parentid=@ParentId";
+                command.Parameters.AddWithValue("@ParentId", parentId.Value);
+            }
+            else
+                command.CommandText = "Select * From vts_tbGroup Where parentid is null";
+
+            DbConnection.db.LoadDataSet(command, dataSet, new string[] { "Users" });
+            return dataSet;
+        }
+
+        public DataSet GetGroupById(int groupid)
+        {
+            DataSet dataSet = new DataSet();
+
+            SqlCommand command = new SqlCommand();
+            
+                command.CommandText = "Select * From vts_tbGroup Where id=@GroupId";
+                command.Parameters.AddWithValue("@GroupId", groupid);
+            
+
+            DbConnection.db.LoadDataSet(command, dataSet, new string[] { "Users" });
+            return dataSet;
+        }
+        public int DeleteGroupById(int groupid)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "Delete From vts_tbGroup Where id=@GroupId";
+            command.Parameters.AddWithValue("@GroupId", groupid);
+            DbConnection.db.ExecuteScalar(command);
+            return 1;
+        }
+
+        public int UpdateGroup(DataRow grouprow)
+        {
+            SqlCommand command = new SqlCommand();
+            if (grouprow["ParentId"] != null)
+            {
+                command.CommandText = "Update vts_tbGroup Set GroupName = @GroupName, ParentId = @ParentId Where id=@GroupId";
+                command.Parameters.AddWithValue("@GroupName", grouprow["GroupName"]);
+                command.Parameters.AddWithValue("@ParentId", grouprow["ParentId"]);
+            }
+            else {
+                command.CommandText = "Update vts_tbGroup Set GroupName = @GroupName Where id=@GroupId";
+                command.Parameters.AddWithValue("@GroupName", grouprow["GroupName"]);
+
+            }
+            command.Parameters.AddWithValue("@GroupId", grouprow["Id"]);
+
+            DbConnection.db.ExecuteScalar(command);
+            return 1;
+        }
+        public int CreateGroup(DataRow grouprow)
+        {
+            SqlCommand command = new SqlCommand();
+            if (grouprow["ParentId"] != null)
+            {
+                command.CommandText = "Insert Into vts_tbGroup (GroupName, ParentId) Values(@ParentId,@ParentId)";
+                command.Parameters.AddWithValue("@GroupName", grouprow["GroupName"]);
+                command.Parameters.AddWithValue("@ParentId", grouprow["ParentId"]);
+            }
+            else {
+                command.CommandText = "Insert Into vts_tbGroup ( GroupName) values(@GroupName)";
+                command.Parameters.AddWithValue("@GroupName", grouprow["GroupName"]);
+            }
+
+            DbConnection.db.ExecuteScalar(command);
+            return 1;
+        }
+        public DataSet GetGroupByName(string groupName, int? parentId)
+        {
+            DataSet dataSet = new DataSet();
+
+            SqlCommand command = new SqlCommand();
+            if (parentId.HasValue)
+            {
+                command.CommandText = "Select * From vts_tbGroup Where GroupName=@GroupName and ParentId = @ParentId";
+                command.Parameters.AddWithValue("@GroupName", groupName);
+                command.Parameters.AddWithValue("@ParentId", parentId.Value);
+            }
+            else {
+                command.CommandText = "Select * From vts_tbGroup Where GroupName=@GroupName and ParentId is null";
+                command.Parameters.AddWithValue("@GroupName", groupName);
+            }
+            DbConnection.db.LoadDataSet(command, dataSet, new string[] { "Users" });
+            return dataSet;
+        }
+
+        /// <summary>
         /// Retrieves the user if any available
         /// </summary>
         public NSurveyUserData GetNSurveyUserData(string userName, string password)

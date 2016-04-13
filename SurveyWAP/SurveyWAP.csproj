@@ -363,7 +363,10 @@
     <Content Include="NSurveyAdmin\CSS\surveymobile.css" />
     <Content Include="NSurveyAdmin\CSS\surveypreview.css" />
     <Content Include="NSurveyAdmin\CSS\voterreport.css" />
+    <Content Include="NSurveyAdmin\SurveyGroup.aspx" />
+    <Content Include="NSurveyAdmin\UserControls\SurveyGroupControl.ascx" />
     <Content Include="NSurveyAdmin\UserControls\UserImportExcel.ascx" />
+    <Content Include="NSurveyAdmin\UserControls\GroupManager.ascx" />
     <Content Include="NSurveyAdmin\UserImportExcel.aspx" />
     <Content Include="NSurveyAdmin\VNPTItemReport.aspx" />
     <Content Include="NSurveyAdmin\VNPTGroupReport.aspx" />
@@ -1277,6 +1280,15 @@
     <EmbeddedResource Include="NSurveyAdmin\EditMatrixQuestion.aspx.resx">
       <DependentUpon>EditMatrixQuestion.aspx.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NSurveyAdmin\SurveyGroup.aspx.resx">
+      <DependentUpon>SurveyGroup.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSurveyAdmin\UserControls\GroupManager.ascx.resx">
+      <DependentUpon>GroupManager.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSurveyAdmin\UserControls\SurveyGroupControl.ascx.resx">
+      <DependentUpon>SurveyGroupControl.ascx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NSurveyAdmin\UserImportExcel.aspx.resx">
       <DependentUpon>UserImportExcel.aspx.cs</DependentUpon>
     </EmbeddedResource>
@@ -1423,12 +1435,32 @@
     <Compile Include="NSurveyAdmin\ControlCode.aspx.designer.cs">
       <DependentUpon>ControlCode.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NSurveyAdmin\SurveyGroup.aspx.cs">
+      <DependentUpon>SurveyGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NSurveyAdmin\SurveyGroup.aspx.designer.cs">
+      <DependentUpon>SurveyGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NSurveyAdmin\UserControls\SurveyGroupControl.ascx.cs">
+      <DependentUpon>SurveyGroupControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSurveyAdmin\UserControls\SurveyGroupControl.ascx.designer.cs">
+      <DependentUpon>SurveyGroupControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="NSurveyAdmin\UserControls\UserImportExcel.ascx.cs">
       <DependentUpon>UserImportExcel.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="NSurveyAdmin\UserControls\UserImportExcel.ascx.designer.cs">
       <DependentUpon>UserImportExcel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NSurveyAdmin\UserControls\GroupManager.ascx.cs">
+      <DependentUpon>GroupManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSurveyAdmin\UserControls\GroupManager.ascx.designer.cs">
+      <DependentUpon>GroupManager.ascx</DependentUpon>
     </Compile>
     <Compile Include="NSurveyAdmin\UserImportExcel.aspx.cs">
       <DependentUpon>UserImportExcel.aspx</DependentUpon>

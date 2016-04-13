@@ -1,6 +1,7 @@
 namespace Votations.NSurvey.IDAL
 {
     using System;
+    using System.Data;
     using Votations.NSurvey.Data;
 
     /// <summary>
@@ -22,6 +23,13 @@ namespace Votations.NSurvey.IDAL
         bool IsAdministrator(int userId);
         void UpdateUser(NSurveyUserData updatedUser);
         void UpdateUserSettings(UserSettingData updatedSettings);
+
+        DataSet GetChildGroups(int? parentId);
+        DataSet GetGroupById(int groupid);
+        DataSet GetGroupByName(string groupName, int? parentId);
+        int DeleteGroupById(int groupid);
+        int UpdateGroup(DataRow grouprow);
+        int CreateGroup(DataRow grouprow);
     }
 }
 

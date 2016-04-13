@@ -143,8 +143,12 @@ namespace Votations.NSurvey.WebAdmin.UserControls
                     mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem(((PageBase)Page).GetPageResource("SurveyOptionsHyperlink"), null, null, string.Format("{0}?surveyid={1}", UINavigator.SurveyOptionsLink, SurveyId)));
 
                     if (((PageBase)Page).NSurveyUser.Identity.IsAdmin || ((PageBase)Page).NSurveyUser.HasRight(NSurveyRights.AccessSurveySettings))
+                    {
                         mnuMain.Items[menuIndex].ChildItems[mnuMain.Items[menuIndex].ChildItems.Count - 1].ChildItems.
                             Add(new MenuItem(((PageBase)Page).GetPageResource("SurveyInformationHyperlink"), null, null, string.Format("{0}?surveyid={1}", UINavigator.SurveyOptionsLink, SurveyId)));
+                        mnuMain.Items[menuIndex].ChildItems[mnuMain.Items[menuIndex].ChildItems.Count - 1].ChildItems.
+                            Add(new MenuItem("Survey Group", null, null, string.Format("{0}?surveyid={1}", UINavigator.SurveyGroupLink, SurveyId)));
+                    }
 
                     if (((PageBase)Page).NSurveyUser.Identity.IsAdmin || ((PageBase)Page).NSurveyUser.HasRight(NSurveyRights.AccessMultiLanguages))
                         mnuMain.Items[menuIndex].ChildItems[mnuMain.Items[menuIndex].ChildItems.Count - 1].ChildItems.
@@ -291,6 +295,7 @@ namespace Votations.NSurvey.WebAdmin.UserControls
                 mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem(((PageBase)Page).GetPageResource("RolesManagerHyperlink"), null, null, string.Format("{0}&surveyid={1}", UINavigator.RolesManagerHyperLink, SurveyId)));
 
                 mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem(((PageBase)Page).GetPageResource("ImportUsersHyperlink"), null, null, string.Format("{0}&surveyid={1}", UINavigator.ImportUsersHyperLink, SurveyId)));
+                mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem("Danh sách đơn vị", null, null, string.Format("{0}&surveyid={1}", UINavigator.GroupManagerHyperLink, SurveyId)));
                 mnuMain.Items[menuIndex].ChildItems.Add(new MenuItem("Import ma trận người dùng", null, null, string.Format("{0}&surveyid={1}", UINavigator.ImportUserMatrixHyperLink, SurveyId)));
 
                 menuIndex++;

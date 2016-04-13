@@ -42,14 +42,14 @@ namespace Votations.NSurvey.SQLServerDAL
     /// <summary>
     /// SQL Server DAL implementation.
     /// </summary>
-    public class Survey: ISurvey
+    public class Survey : ISurvey
     {
         /// <summary>
         /// Survey Class Constructor : empty
         /// </summary>
-        static Survey ()
+        static Survey()
         {
-                       
+
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public SurveyData GetAllSurveys()
         {
             SurveyData surveyData = new SurveyData();
-           DbConnection.db.LoadDataSet("vts_spSurveyGetAllDetails", surveyData, new string[] { "Surveys" });
+            DbConnection.db.LoadDataSet("vts_spSurveyGetAllDetails", surveyData, new string[] { "Surveys" });
             return surveyData;
         }
 
@@ -80,7 +80,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public SurveyData GetAllSurveysList()
         {
             SurveyData surveyData = new SurveyData();
-           DbConnection.db.LoadDataSet("vts_spSurveyGetList", surveyData, new string[] { "Surveys" });
+            DbConnection.db.LoadDataSet("vts_spSurveyGetList", surveyData, new string[] { "Surveys" });
             return surveyData;
         }
 
@@ -93,7 +93,7 @@ namespace Votations.NSurvey.SQLServerDAL
 
             //SqlCommand command = new SqlCommand("vts_spSurveyGetListByTitle");
             //command.CommandType = CommandType.StoredProcedure;
-                        
+
             SurveyData surveyData = new SurveyData();
 
             //SqlParameter[] spParameters = new SqlParameter[3];
@@ -112,7 +112,7 @@ namespace Votations.NSurvey.SQLServerDAL
                 sqlParams.Add(new SqlParameter("@UserId", userID).SqlValue);
             }
 
-           DbConnection.db.LoadDataSet("vts_spSurveyGetListByTitle", surveyData, new string[] { "Surveys" }, sqlParams.ToArray());
+            DbConnection.db.LoadDataSet("vts_spSurveyGetListByTitle", surveyData, new string[] { "Surveys" }, sqlParams.ToArray());
             //db.LoadDataSet("vts_spSurveyGetListByTitle", surveyData, new string[] { "Surveys" }, spParameters);
             return surveyData;
         }
@@ -126,7 +126,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public SurveyData CloneSurvey(int surveyId)
         {
             SurveyData surveyData = new SurveyData();
-           DbConnection.db.LoadDataSet("vts_spSurveyClone", surveyData, new string[] { "Surveys" }, new SqlParameter("@SurveyID", surveyId).SqlValue);
+            DbConnection.db.LoadDataSet("vts_spSurveyClone", surveyData, new string[] { "Surveys" }, new SqlParameter("@SurveyID", surveyId).SqlValue);
             return surveyData;
         }
 
@@ -137,7 +137,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public SurveyData GetArchivedSurveys()
         {
             SurveyData surveyData = new SurveyData();
-           DbConnection.db.LoadDataSet("vts_spSurveysGetArchive", surveyData, new string[] { "Surveys" });
+            DbConnection.db.LoadDataSet("vts_spSurveysGetArchive", surveyData, new string[] { "Surveys" });
             return surveyData;
         }
 
@@ -173,7 +173,7 @@ namespace Votations.NSurvey.SQLServerDAL
             }
 
             SurveyData surveyData = new SurveyData();
-           DbConnection.db.LoadDataSet("vts_spSurveyGetDetails", surveyData, new string[] { "Surveys" }, sqlParams.ToArray());
+            DbConnection.db.LoadDataSet("vts_spSurveyGetDetails", surveyData, new string[] { "Surveys" }, sqlParams.ToArray());
             return surveyData;
         }
 
@@ -224,7 +224,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public SurveyData GetActivatedSurvey()
         {
             SurveyData surveyData = new SurveyData();
-           DbConnection.db.LoadDataSet("vts_spSurveyGetActivated", surveyData, new string[] { "Surveys" });
+            DbConnection.db.LoadDataSet("vts_spSurveyGetActivated", surveyData, new string[] { "Surveys" });
             return surveyData;
         }
 
@@ -235,7 +235,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public SurveyData GetUnAssignedSurveysList(int userId)
         {
             SurveyData surveyData = new SurveyData();
-           DbConnection.db.LoadDataSet("vts_spSurveyGetUnAssignedListForUser", surveyData, new string[] { "Surveys" }, new SqlParameter("@UserId", userId).SqlValue);
+            DbConnection.db.LoadDataSet("vts_spSurveyGetUnAssignedListForUser", surveyData, new string[] { "Surveys" }, new SqlParameter("@UserId", userId).SqlValue);
             return surveyData;
         }
 
@@ -247,7 +247,7 @@ namespace Votations.NSurvey.SQLServerDAL
         {
             SurveyData surveyData = new SurveyData();
 
-           DbConnection.db.LoadDataSet("vts_spSurveyGetAssignedListForUser", surveyData, new string[] { "Surveys" }, new SqlParameter("@UserId", userId).SqlValue);
+            DbConnection.db.LoadDataSet("vts_spSurveyGetAssignedListForUser", surveyData, new string[] { "Surveys" }, new SqlParameter("@UserId", userId).SqlValue);
             return surveyData;
         }
 
@@ -268,7 +268,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// <param name="surveyId">Survey to delete from the database</param>
         public void DeleteSurveyById(int surveyId)
         {
-           DbConnection.db.ExecuteNonQuery("vts_spSurveyDeleteById", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyDeleteById", new SqlParameter("@SurveyID", surveyId).SqlValue);
         }
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// <param name="surveyId">Survey ID</param>
         public void ResetVotes(int surveyId)
         {
-           DbConnection.db.ExecuteNonQuery("vts_spSurveyResetVotes", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyResetVotes", new SqlParameter("@SurveyID", surveyId).SqlValue);
         }
 
         /// <summary>
@@ -294,7 +294,7 @@ namespace Votations.NSurvey.SQLServerDAL
                 sqlParams.Add(new SqlParameter("@SurveyId", surveyId).SqlValue);
                 sqlParams.Add(new SqlParameter("@UserId", userId).SqlValue);
             }
-            
+
             DbConnection.db.ExecuteNonQuery("vts_spUserSurveyAssignUser", sqlParams.ToArray());
         }
 
@@ -422,7 +422,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </returns>
         public int GetFirstSurveyId(int userId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyGetFirstIDForUser", new SqlParameter("@UserId", userId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyGetFirstIDForUser", new SqlParameter("@UserId", userId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return -1;
@@ -448,7 +448,7 @@ namespace Votations.NSurvey.SQLServerDAL
                 sqlParams.Add(new SqlParameter("@UserId", userId).SqlValue);
             }
 
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyCheckUserAssigned", sqlParams.ToArray());
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyCheckUserAssigned", sqlParams.ToArray());
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return false;
@@ -466,7 +466,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// <returns></returns>
         public int GetPagesNumber(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyGetPagesNumber", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyGetPagesNumber", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return 1;
@@ -483,7 +483,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// <returns></returns>
         public int GetSurveyIdFromGuid(Guid id)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyGetSurveyIdFromGuid", new SqlParameter("@SurveyGuID", id).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyGetSurveyIdFromGuid", new SqlParameter("@SurveyGuID", id).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return -1;
@@ -496,7 +496,7 @@ namespace Votations.NSurvey.SQLServerDAL
 
         public int GetSurveyIdFromFriendlyName(string name)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyGetSurveyIdFromFriendlyName", new SqlParameter("@FriendlyName", name).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyGetSurveyIdFromFriendlyName", new SqlParameter("@FriendlyName", name).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return -1;
@@ -518,8 +518,8 @@ namespace Votations.NSurvey.SQLServerDAL
             {
                 SqlConnection dbConnection = new SqlConnection(DbConnection.NewDbConnectionString);
                 SqlCommand addNewSurvey = GetInsertSurveyCommand(dbConnection, null);
-               //SqlHelper.UpdateDataset(addNewSurvey, new SqlCommand(), new SqlCommand(), newSurvey, "Surveys", true);
-               DbConnection.db.UpdateDataSet(newSurvey, "Surveys", addNewSurvey, new SqlCommand(), new SqlCommand(), UpdateBehavior.Transactional );
+                //SqlHelper.UpdateDataset(addNewSurvey, new SqlCommand(), new SqlCommand(), newSurvey, "Surveys", true);
+                DbConnection.db.UpdateDataSet(newSurvey, "Surveys", addNewSurvey, new SqlCommand(), new SqlCommand(), UpdateBehavior.Transactional);
             }
             catch (SqlException ex)
             {
@@ -584,7 +584,7 @@ namespace Votations.NSurvey.SQLServerDAL
             addNewRule.Parameters["@BranchingRuleID"].Direction = ParameterDirection.Output;
 
             //SqlHelper.UpdateDataset(addNewRule, new SqlCommand(), new SqlCommand(), newBranchingRule, "BranchingRules", true);
-           DbConnection.db.UpdateDataSet(newBranchingRule, "BranchingRules", addNewRule, new SqlCommand(), new SqlCommand(), UpdateBehavior.Transactional);
+            DbConnection.db.UpdateDataSet(newBranchingRule, "BranchingRules", addNewRule, new SqlCommand(), new SqlCommand(), UpdateBehavior.Transactional);
         }
 
         /// <summary>
@@ -608,7 +608,7 @@ namespace Votations.NSurvey.SQLServerDAL
             addNewCondition.Parameters.Add(new SqlParameter("@MessageConditionId", SqlDbType.Int, 4, "MessageConditionId"));
             addNewCondition.Parameters["@MessageConditionId"].Direction = ParameterDirection.Output;
 
-           DbConnection.db.UpdateDataSet(newMessageCondition, "MessageConditions", addNewCondition, new SqlCommand(), new SqlCommand(), UpdateBehavior.Transactional);
+            DbConnection.db.UpdateDataSet(newMessageCondition, "MessageConditions", addNewCondition, new SqlCommand(), new SqlCommand(), UpdateBehavior.Transactional);
         }
 
         /// <summary>
@@ -630,7 +630,7 @@ namespace Votations.NSurvey.SQLServerDAL
             updateCondition.Parameters.Add(new SqlParameter("@Score", SqlDbType.Int, 4, "Score"));
             updateCondition.Parameters.Add(new SqlParameter("@ScoreMax", SqlDbType.Int, 4, "ScoreMax"));
 
-           DbConnection.db.UpdateDataSet(updatedMessageCondition, "MessageConditions", updateCondition, new SqlCommand(), updateCondition, UpdateBehavior.Transactional);
+            DbConnection.db.UpdateDataSet(updatedMessageCondition, "MessageConditions", updateCondition, new SqlCommand(), updateCondition, UpdateBehavior.Transactional);
         }
 
         /// <summary>
@@ -639,7 +639,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public MessageConditionData GetSurveyMessageConditions(int surveyId)
         {
             MessageConditionData messageCondition = new MessageConditionData();
-           DbConnection.db.LoadDataSet("vts_spSurveyMessageConditionsGetAll", messageCondition, new string[] { "MessageConditions" }, new SqlParameter("@SurveyID", surveyId).SqlValue);
+            DbConnection.db.LoadDataSet("vts_spSurveyMessageConditionsGetAll", messageCondition, new string[] { "MessageConditions" }, new SqlParameter("@SurveyID", surveyId).SqlValue);
             return messageCondition;
         }
 
@@ -648,7 +648,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public void DeleteMessageConditionById(int messageConditionId)
         {
-           DbConnection.db.ExecuteNonQuery("vts_spSurveyMessageConditionDeleteByID", new SqlParameter("@MessageConditionID", messageConditionId).SqlValue);
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyMessageConditionDeleteByID", new SqlParameter("@MessageConditionID", messageConditionId).SqlValue);
         }
 
         /// <summary>
@@ -687,7 +687,7 @@ namespace Votations.NSurvey.SQLServerDAL
                 sqlParams.Add(new SqlParameter("@SurveyId", surveyId).SqlValue);
                 sqlParams.Add(new SqlParameter("@CountNumber", incrementNumber).SqlValue);
             }
-            
+
             DbConnection.db.ExecuteNonQuery("vts_spSurveyIncrementResultsViews", sqlParams.ToArray());
         }
 
@@ -751,7 +751,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public BranchingRuleData GetSurveyBranchingRules(int surveyId)
         {
             BranchingRuleData branchingRule = new BranchingRuleData();
-           DbConnection.db.LoadDataSet("vts_spSurveyBranchingRuleGetAll", branchingRule, new string[] { "BranchingRules" }, new SqlParameter("@SurveyID", surveyId).SqlValue);
+            DbConnection.db.LoadDataSet("vts_spSurveyBranchingRuleGetAll", branchingRule, new string[] { "BranchingRules" }, new SqlParameter("@SurveyID", surveyId).SqlValue);
             return branchingRule;
         }
 
@@ -760,7 +760,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public void DeleteBranchingRuleById(int branchingRuleId)
         {
-           DbConnection.db.ExecuteNonQuery("vts_spSurveyBranchingRuleDeleteByID", new SqlParameter("@BranchingRuleID", branchingRuleId).SqlValue);
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyBranchingRuleDeleteByID", new SqlParameter("@BranchingRuleID", branchingRuleId).SqlValue);
         }
 
         /// <summary>
@@ -816,7 +816,7 @@ namespace Votations.NSurvey.SQLServerDAL
                     sqlParams.Add(new SqlParameter("@EmailSubject", updatedSurvey.Surveys[0].EmailSubject).SqlValue);
                 }
 
-               DbConnection.db.ExecuteNonQuery("vts_spEmailNotificationSettingsAddNew", sqlParams.ToArray());
+                DbConnection.db.ExecuteNonQuery("vts_spEmailNotificationSettingsAddNew", sqlParams.ToArray());
             }
             else
             {
@@ -838,7 +838,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public int GetCookieExpiration(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyGetCookieExpiration", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyGetCookieExpiration", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return 0;
@@ -885,7 +885,7 @@ namespace Votations.NSurvey.SQLServerDAL
                 sqlParams.Add(new SqlParameter("@SurveyId", surveyId).SqlValue);
                 sqlParams.Add(new SqlParameter("@IPExpires", ipExpires).SqlValue);
             }
-            
+
             DbConnection.db.ExecuteNonQuery("vts_spSurveyIPExpirationUpdate", sqlParams.ToArray());
         }
 
@@ -915,7 +915,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public int GetIPExpiration(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyIPExpirationGet", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyIPExpirationGet", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return 0;
@@ -932,7 +932,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public string GetSurveyPassword(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyAccessPasswordGet", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyAccessPasswordGet", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return null;
@@ -984,7 +984,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public bool IsSurveyEmailInviteOnly(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyOnlyInvitedGet", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyOnlyInvitedGet", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return false;
@@ -1000,7 +1000,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public bool IsSurveySaveTokenUserData(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveySaveTokenUserDataGet", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveySaveTokenUserDataGet", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return false;
@@ -1035,7 +1035,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public int GetSurveyUnAuthentifiedUserAction(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyGetUnAuthentifiedUserAction", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyGetUnAuthentifiedUserAction", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return -1;
@@ -1062,7 +1062,7 @@ namespace Votations.NSurvey.SQLServerDAL
                 sqlParams.Add(new SqlParameter("@pageNumber", pageNumber).SqlValue);
             }
 
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyHasPageBranching", sqlParams.ToArray());
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyHasPageBranching", sqlParams.ToArray());
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return false;
@@ -1079,7 +1079,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public ProgressModeData GetSurveyProgressModes()
         {
             ProgressModeData progressModeData = new ProgressModeData();
-           DbConnection.db.LoadDataSet("vts_spProgressModeGetAll", progressModeData, new string[] { "ProgressDisplayModes" });
+            DbConnection.db.LoadDataSet("vts_spProgressModeGetAll", progressModeData, new string[] { "ProgressDisplayModes" });
             return progressModeData;
         }
 
@@ -1089,7 +1089,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public NotificationModeData GetSurveyNotificationModes()
         {
             NotificationModeData notificationModeData = new NotificationModeData();
-           DbConnection.db.LoadDataSet("vts_spNotificationModeGetAll", notificationModeData, new string[] { "NotificationModes" });
+            DbConnection.db.LoadDataSet("vts_spNotificationModeGetAll", notificationModeData, new string[] { "NotificationModes" });
             return notificationModeData;
         }
 
@@ -1126,7 +1126,7 @@ namespace Votations.NSurvey.SQLServerDAL
             updatePageOptions.Parameters.Add("@PageNumber", SqlDbType.Int, 4, "PageNumber");
             updatePageOptions.Parameters.Add("@RandomizeQuestions", SqlDbType.Bit, 1, "RandomizeQuestions");
             updatePageOptions.Parameters.Add("@EnableSubmitButton", SqlDbType.Bit, 1, "EnableSubmitButton");
-          DbConnection.db.UpdateDataSet(updatedPageOptions, "PageOptions", updatePageOptions, new SqlCommand(), updatePageOptions, UpdateBehavior.Transactional);
+            DbConnection.db.UpdateDataSet(updatedPageOptions, "PageOptions", updatePageOptions, new SqlCommand(), updatePageOptions, UpdateBehavior.Transactional);
         }
 
         /// <summary>
@@ -1135,7 +1135,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public ResumeModeData GetSurveyResumeModes()
         {
             ResumeModeData resumeModeData = new ResumeModeData();
-           DbConnection.db.LoadDataSet("vts_spResumeModeGetAll", resumeModeData, new string[] { "ResumeModes" });
+            DbConnection.db.LoadDataSet("vts_spResumeModeGetAll", resumeModeData, new string[] { "ResumeModes" });
             return resumeModeData;
         }
 
@@ -1145,7 +1145,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public MessageConditionData GetSurveyMessageCondition(int messageConditionId)
         {
             MessageConditionData messageCondition = new MessageConditionData();
-           DbConnection.db.LoadDataSet("vts_spSurveyMessageConditionsGetDetails", messageCondition, new string[] { "MessageConditions" }, new SqlParameter("@MessageConditionId", messageConditionId).SqlValue);
+            DbConnection.db.LoadDataSet("vts_spSurveyMessageConditionsGetDetails", messageCondition, new string[] { "MessageConditions" }, new SqlParameter("@MessageConditionId", messageConditionId).SqlValue);
             return messageCondition;
         }
 
@@ -1154,7 +1154,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public bool IsSurveyScored(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyIsScored", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyIsScored", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return false;
@@ -1219,7 +1219,7 @@ namespace Votations.NSurvey.SQLServerDAL
                 sqlParams.Add(new SqlParameter("@AllowMultipleSubmissions", allowMultipleSubmissions).SqlValue);
             }
 
-           DbConnection.db.ExecuteNonQuery("vts_spSurveyUpdateASPNetSubmissions", sqlParams.ToArray());
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyUpdateASPNetSubmissions", sqlParams.ToArray());
         }
 
         /// <summary>
@@ -1228,7 +1228,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public bool NSurveyAllowsMultipleSubmissions(int surveyId)
         {
-            Object scalarValue =DbConnection.db.ExecuteScalar("vts_spSurveyAllowMultipleNSurveyVotes", new SqlParameter("@SurveyID", surveyId).SqlValue);
+            Object scalarValue = DbConnection.db.ExecuteScalar("vts_spSurveyAllowMultipleNSurveyVotes", new SqlParameter("@SurveyID", surveyId).SqlValue);
             if (scalarValue == null || scalarValue == DBNull.Value)
             {
                 return false;
@@ -1254,7 +1254,7 @@ namespace Votations.NSurvey.SQLServerDAL
                 sqlParams.Add(new SqlParameter("@allowMultipleNSurveySubmissions", allowMultipleNSurveySubmissions).SqlValue);
             }
 
-           DbConnection.db.ExecuteNonQuery("vts_spSurveyUpdateNSurveySubmissions", sqlParams.ToArray());
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyUpdateNSurveySubmissions", sqlParams.ToArray());
         }
 
         /// <summary>
@@ -1264,7 +1264,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public PipeData GetSurveyPipeDataFromQuestionId(int questionId)
         {
             PipeData pipeData = new PipeData();
-           DbConnection.db.LoadDataSet("vts_spSurveyGetPipeDataFromQuestionId", pipeData, new string[] { "Questions", "Answers" }, new SqlParameter("@QuestionId", questionId).SqlValue);
+            DbConnection.db.LoadDataSet("vts_spSurveyGetPipeDataFromQuestionId", pipeData, new string[] { "Questions", "Answers" }, new SqlParameter("@QuestionId", questionId).SqlValue);
             return pipeData;
         }
 
@@ -1275,7 +1275,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public NSurveyForm GetFormForExport(int surveyId)
         {
             NSurveyForm surveyForm = new NSurveyForm();
-           DbConnection.db.LoadDataSet("vts_spSurveyGetForExport", surveyForm, new string[] { "AnswerType", "RegularExpression", "Survey", "Question", "Answer", "AnswerConnection", "ChildQuestion", "AnswerProperty", "QuestionSectionOption", "QuestionSectionGridAnswer", "Surveylanguage", "MultiLanguageText", "QuestionGroup" }, new SqlParameter("@SurveyId", surveyId).SqlValue);
+            DbConnection.db.LoadDataSet("vts_spSurveyGetForExport", surveyForm, new string[] { "AnswerType", "RegularExpression", "Survey", "Question", "Answer", "AnswerConnection", "ChildQuestion", "AnswerProperty", "QuestionSectionOption", "QuestionSectionGridAnswer", "Surveylanguage", "MultiLanguageText", "QuestionGroup" }, new SqlParameter("@SurveyId", surveyId).SqlValue);
             return surveyForm;
         }
 
@@ -1308,9 +1308,9 @@ namespace Votations.NSurvey.SQLServerDAL
                 importSurveys.Survey[0].FolderId = folderId;
                 addNewSurvey.Parameters.Add(new SqlParameter("@MultiLanguageModeId", SqlDbType.Int, 4, "MultiLanguageModeId"));
                 addNewSurvey.Parameters.Add(new SqlParameter("@ThankYouMessage", SqlDbType.NVarChar, 4000, "ThankYouMessage"));
-               DbConnection.db.UpdateDataSet(importSurveys, "AnswerType", addNewAnswerType, new SqlCommand(), addNewAnswerType, UpdateBehavior.Transactional);
-               DbConnection.db.UpdateDataSet(importSurveys, "RegularExpression", addNewRegularExpression, new SqlCommand(), addNewRegularExpression, UpdateBehavior.Transactional);
-               DbConnection.db.UpdateDataSet(importSurveys, "Survey", addNewSurvey, new SqlCommand(), addNewSurvey, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "AnswerType", addNewAnswerType, new SqlCommand(), addNewAnswerType, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "RegularExpression", addNewRegularExpression, new SqlCommand(), addNewRegularExpression, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "Survey", addNewSurvey, new SqlCommand(), addNewSurvey, UpdateBehavior.Transactional);
 
                 // Add Question groups so we can attach them to questions
                 var groups = new QuestionGroups();
@@ -1350,21 +1350,21 @@ namespace Votations.NSurvey.SQLServerDAL
                             groupIdHere = grpHere.ID;
                         }
                         importSurveys.Question
-                              .Where(x =>!x.IsQuestionGroupIdNull() && (x.QuestionGroupId == qgrp.OldId))
+                              .Where(x => !x.IsQuestionGroupIdNull() && (x.QuestionGroupId == qgrp.OldId))
                               .ToList().ForEach(x => x.QuestionGroupId = groupIdHere);
 
                     }
                 }
 
-               DbConnection.db.UpdateDataSet(importSurveys, "Question", addNewQuestion, new SqlCommand(), addNewQuestion, UpdateBehavior.Transactional);
-               DbConnection.db.UpdateDataSet(importSurveys, "Answer", addNewAnswer, new SqlCommand(), addNewAnswer, UpdateBehavior.Transactional);
-               DbConnection.db.UpdateDataSet(importSurveys, "AnswerConnection", addNewAnswerConnection, new SqlCommand(), addNewAnswerConnection, UpdateBehavior.Transactional);
-               DbConnection.db.UpdateDataSet(importSurveys, "ChildQuestion", addNewChildQuestion, new SqlCommand(), addNewChildQuestion, UpdateBehavior.Transactional);
-               DbConnection.db.UpdateDataSet(importSurveys, "AnswerProperty", addNewAnswerProperty, new SqlCommand(), addNewAnswerProperty, UpdateBehavior.Transactional);
-               DbConnection.db.UpdateDataSet(importSurveys, "QuestionSectionOption", addNewQuestionSection, new SqlCommand(), addNewQuestionSection, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "Question", addNewQuestion, new SqlCommand(), addNewQuestion, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "Answer", addNewAnswer, new SqlCommand(), addNewAnswer, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "AnswerConnection", addNewAnswerConnection, new SqlCommand(), addNewAnswerConnection, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "ChildQuestion", addNewChildQuestion, new SqlCommand(), addNewChildQuestion, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "AnswerProperty", addNewAnswerProperty, new SqlCommand(), addNewAnswerProperty, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "QuestionSectionOption", addNewQuestionSection, new SqlCommand(), addNewQuestionSection, UpdateBehavior.Transactional);
                 int newSurveyId = importSurveys.Survey[0].SurveyID;
 
-               DbConnection.db.UpdateDataSet(importSurveys, "QuestionSectionGridAnswer", addNewQuestionSectionGridAnswers, new SqlCommand(), addNewQuestionSectionGridAnswers, UpdateBehavior.Transactional);
+                DbConnection.db.UpdateDataSet(importSurveys, "QuestionSectionGridAnswer", addNewQuestionSectionGridAnswers, new SqlCommand(), addNewQuestionSectionGridAnswers, UpdateBehavior.Transactional);
                 insertTransaction.Commit();
                 var multiLanguage = new MultiLanguage();
                 foreach (var lang in importSurveys.SurveyLanguage)
@@ -1417,7 +1417,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public void IncreaseQuotaEntries(int surveyId)
         {
-           DbConnection.db.ExecuteNonQuery("vts_spSurveyEntryQuotaIncreaseEntry", new SqlParameter("@SurveyId", surveyId).SqlValue);
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyEntryQuotaIncreaseEntry", new SqlParameter("@SurveyId", surveyId).SqlValue);
         }
 
         /// <summary>
@@ -1426,7 +1426,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public void ResetQuotaEntries(int surveyId)
         {
-           DbConnection.db.ExecuteNonQuery("vts_spSurveyEntryQuotaReset", new SqlParameter("@SurveyId", surveyId).SqlValue);
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyEntryQuotaReset", new SqlParameter("@SurveyId", surveyId).SqlValue);
         }
 
         /// <summary>
@@ -1434,7 +1434,7 @@ namespace Votations.NSurvey.SQLServerDAL
         /// </summary>
         public void DeleteQuotaSettings(int surveyId)
         {
-           DbConnection.db.ExecuteNonQuery("vts_spSurveyEntryDelete", new SqlParameter("@SurveyId", surveyId).SqlValue);
+            DbConnection.db.ExecuteNonQuery("vts_spSurveyEntryDelete", new SqlParameter("@SurveyId", surveyId).SqlValue);
         }
 
         /// <summary>
@@ -1443,7 +1443,7 @@ namespace Votations.NSurvey.SQLServerDAL
         public SurveyEntryQuotaData GetQuotaSettings(int surveyId)
         {
             SurveyEntryQuotaData entryQuota = new SurveyEntryQuotaData();
-           DbConnection.db.LoadDataSet("vts_spSurveyEntryQuotaGetDetails", entryQuota, new string[] { "SurveyEntryQuotas" }, new SqlParameter("@SurveyId", surveyId).SqlValue);
+            DbConnection.db.LoadDataSet("vts_spSurveyEntryQuotaGetDetails", entryQuota, new string[] { "SurveyEntryQuotas" }, new SqlParameter("@SurveyId", surveyId).SqlValue);
             return entryQuota;
         }
 
@@ -1459,7 +1459,7 @@ namespace Votations.NSurvey.SQLServerDAL
             updateQuota.Parameters.Add(new SqlParameter("@SurveyId", SqlDbType.Int, 4, "SurveyId"));
             updateQuota.Parameters.Add(new SqlParameter("@MaxReachedMessage", SqlDbType.NVarChar, 4000, "MaxReachedMessage"));
             updateQuota.Parameters.Add(new SqlParameter("@MaxEntries", SqlDbType.Int, 4, "MaxEntries"));
-           DbConnection.db.UpdateDataSet(surveyQuota, "SurveyEntryQuotas", updateQuota, new SqlCommand(), updateQuota, UpdateBehavior.Transactional);
+            DbConnection.db.UpdateDataSet(surveyQuota, "SurveyEntryQuotas", updateQuota, new SqlCommand(), updateQuota, UpdateBehavior.Transactional);
         }
 
 
@@ -1475,7 +1475,7 @@ namespace Votations.NSurvey.SQLServerDAL
                 sqlParams.Add(new SqlParameter("@SurveyId", surveyId).SqlValue);
             }
 
-           DbConnection.db.ExecuteNonQuery("vts_spSurveySetFolder", sqlParams.ToArray());
+            DbConnection.db.ExecuteNonQuery("vts_spSurveySetFolder", sqlParams.ToArray());
         }
 
         /// <summary>
@@ -1529,15 +1529,42 @@ namespace Votations.NSurvey.SQLServerDAL
             {
                 ArrayList sqlParams = new ArrayList();
                 {
-                    
+
                     sqlParams.Add(new SqlParameter("@SurveyId", item.SurveyId).SqlValue);
                     sqlParams.Add(new SqlParameter("@GroupName", item.GroupName).SqlValue);
                     sqlParams.Add(new SqlParameter("@FilterPhase", item.FilterPhase).SqlValue);
-                    
+
                 }
 
                 DbConnection.db.ExecuteNonQuery("vts_spSurveyAddAdGroupDetail", sqlParams.ToArray());
             }
+        }
+
+        public DataSet GetSurveyGroup(int surveyId)
+        {
+            DataSet dataSet = new DataSet();
+
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "Select * From vts_tbSurveyGroup Where ServeyId=@SurveyId";
+            command.Parameters.AddWithValue("@SurveyId", surveyId);
+
+            DbConnection.db.LoadDataSet(command, dataSet, new string[] { "Surveys" });
+            return dataSet;
+        }
+
+        public int UpdateSurveyGroup(DataRow row)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "Delete From vts_tbSurveyGroup ServeyId id=@ServeyId";
+            command.Parameters.AddWithValue("@ServeyId", row["ServeyId"]);
+            DbConnection.db.ExecuteScalar(command);
+            if (row["GroupId"] != null && !String.IsNullOrEmpty(row["GroupId"].ToString()))
+            {
+                command.CommandText = "Insert Into vts_tbSurveyGroup (ServeyId,GroupId) Values(@ServeyId,@GroupId)";
+                command.Parameters.AddWithValue("@GroupId", row["GroupId"]);
+                DbConnection.db.ExecuteScalar(command);
+            }
+            return 1;
         }
     }
 }

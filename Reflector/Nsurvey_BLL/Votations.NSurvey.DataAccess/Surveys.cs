@@ -1,6 +1,7 @@
 namespace Votations.NSurvey.DataAccess
 {
     using System;
+    using System.Data;
     using Votations.NSurvey;
     using Votations.NSurvey.DALFactory;
     using Votations.NSurvey.Data;
@@ -367,6 +368,15 @@ namespace Votations.NSurvey.DataAccess
         public void SetFriendlyName(int surveyId, string friendlyName)
         {
             SurveyFactory.Create().SetFriendlyName(surveyId, friendlyName);
+        }
+
+        public DataSet GetSurveyGroup(int surveyId)
+        {
+            return SurveyFactory.Create().GetSurveyGroup(surveyId);
+        }
+
+        public int UpdateSurveyGroup(DataRow row) {
+            return SurveyFactory.Create().UpdateSurveyGroup(row);
         }
     }
 }
