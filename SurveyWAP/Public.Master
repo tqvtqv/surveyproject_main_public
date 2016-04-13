@@ -66,12 +66,12 @@
       
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Ban chức năng</a></li>
+        <li><a href="details.aspx?groupid=1">Ban chức năng</a></li>
         <li><a href="#">VNPT Tỉnh/TP</a></li>
         <li><a href="#">Công ty dọc</a></li>
         <li><a href="#">TTKD VNPT Tỉnh/TP</a></li>
-        <li><a href="#">Báo cáo</a></li>
-        <li><a href="#">Quản trị</a></li>
+        <li><a href="NSurveyAdmin/VNPTGroupReport.aspx">Báo cáo</a></li>
+        <li><a href="NSurveyAdmin/SurveyList.aspx">Quản trị</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
