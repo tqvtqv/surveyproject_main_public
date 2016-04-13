@@ -11,9 +11,14 @@
             
         }
 
-        thread tr {
-            background-color:gray;
-        }
+        .bgtable thead tr {
+            background-color:gainsboro;
+            
+}
+      .bgtable tr {
+          border-style: dotted;
+          border-width:2px;
+      }
     </style>
     <div class="row" style="margin-top:-20px;">
         <div class="col-md-12 BarDiv">
@@ -23,58 +28,68 @@
     <br />
    <div class="row">
        <div class="col-md-6">
-            <table class="table table-bordered">
+            <table class="table table-bordered bgtable">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Tên đơn vị</th>
+        <th>Đã khảo sát</th>
+        <th>Chưa khảo sát</th>
+        <th>Điểm</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>
+            <input type="checkbox" />
+        </td>
+        <td>&nbsp;</td>
+        <td>99</td>
       </tr>
       <tr>
         <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
+        <td><input type="checkbox" /></td>
+        <td>&nbsp;</td>
+            <td>99</td>
       </tr>
       <tr>
         <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
+        <td><input type="checkbox" /></td>
+        <td>&nbsp;</td>
+            <td>99</td>
       </tr>
     </tbody>
   </table>
        </div>
        <div class="col-md-6">
 
-            <table class="table table-bordered">
+            <table class="table table-bordered bgtable">
     <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+       <tr>
+        <th>Tên đơn vị</th>
+        <th>Đã khảo sát</th>
+        <th>Chưa khảo sát</th>
+        <th>Điểm</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><input type="checkbox" /></td>
+        <td>&nbsp;</td>
+            <td>99</td>
       </tr>
       <tr>
         <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
+        <td><input type="checkbox" /></td>
+        <td>&nbsp;</td>  <td>99</td>
+
       </tr>
       <tr>
         <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
+        <td><input type="checkbox" /></td>
+        <td>&nbsp;</td>
+            <td>99</td>
       </tr>
     </tbody>
   </table>
