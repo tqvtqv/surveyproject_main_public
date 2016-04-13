@@ -151,7 +151,8 @@ namespace Votations.NSurvey.WebAdmin.UserControls
 			CreateNewGroupButton.Visible = false;
 			ApplyChangesButton.Visible = true;
             DeleteGroupButton.Visible = true;// !(UserId == ((PageBase)Page).NSurveyUser.Identity.UserId) && _userProvider is INSurveyUserProvider;
-            BindFields();
+            if (!Page.IsPostBack)
+                BindFields();
 
         }
 
@@ -173,8 +174,8 @@ namespace Votations.NSurvey.WebAdmin.UserControls
             DataSet groups = UsersData.GetGroupById(GroupId);
             if (groups.Tables[0].Rows.Count > 0)
             {
-                if (groups.Tables[0].Rows[0]["Id"] != null)
-                    ParentIdTextBox.Text = groups.Tables[0].Rows[0]["Id"].ToString();
+                if (groups.Tables[0].Rows[0]["ParentId"] != null)
+                    ParentIdTextBox.Text = groups.Tables[0].Rows[0]["ParentId"].ToString();
                 if (groups.Tables[0].Rows[0]["GroupName"] != null)
                     GroupNameTextBox.Text = groups.Tables[0].Rows[0]["GroupName"].ToString();
             }
@@ -229,7 +230,7 @@ namespace Votations.NSurvey.WebAdmin.UserControls
                     row["ParentId"] = ParentIdTextBox.Text;
 
                 UsersData.CreateGroup(row);
-                UINavigator.NavigateToUserManager(((PageBase)Page).getSurveyId(),((PageBase)Page).MenuIndex);
+                UINavigator.NavigateToGroupManager(((PageBase)Page).getSurveyId(),((PageBase)Page).MenuIndex);
 			}
 
 		}
@@ -291,8 +292,12 @@ namespace Votations.NSurvey.WebAdmin.UserControls
             else
                 group = UsersData.GetGroupByName(GroupNameTextBox.Text, parentid);
 
-            if (group != null && group.Tables.Count > 0 && group.Tables[0].Rows.Count > 0)
-                int.TryParse((String)group.Tables[0].Rows[0]["Id"], out groupid);
+            if (group != null && group.Tables.Count > 0 && group.Tables[0].Rows.Count > 0) {
+                try {
+                    groupid = Convert.ToInt32(group.Tables[0].Rows[0]["Id"]);
+                } catch (Exception ex) { groupid = -1; }
+            }
+                
 
             if (groupid != -1 && groupid != GroupId)
 			{

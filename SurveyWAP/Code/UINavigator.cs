@@ -206,6 +206,10 @@ namespace Votations.NSurvey.WebAdmin
         {
             HttpContext.Current.Response.Redirect(String.Format("{0}?surveyid={1}&menuindex={2}", UsersManagerHyperLink, surveyId, menuIndex));
         }
+        public static void NavigateToGroupManager(int surveyId, int menuIndex)
+        {
+            HttpContext.Current.Response.Redirect(String.Format("{0}&surveyid={1}&menuindex={2}", GroupManagerHyperLink, surveyId, menuIndex));
+        }
 
         public static void NavigateToRoleManager(int surveyId, int menuIndex)
         {

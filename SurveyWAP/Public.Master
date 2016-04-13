@@ -67,9 +67,31 @@
       
       <ul class="nav navbar-nav navbar-right">
         <li><a href="details.aspx?groupid=1">Ban chức năng</a></li>
-        <li><a href="#">VNPT Tỉnh/TP</a></li>
-        <li><a href="#">Công ty dọc</a></li>
-        <li><a href="#">TTKD VNPT Tỉnh/TP</a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VNPT Tỉnh/TP<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="details.aspx?groupid=5">Miền Bắc</a></li>
+            <li><a href="details.aspx?groupid=6">Miền Nam</a></li>
+            <li><a href="details.aspx?groupid=7">Miền Trung</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Công ty dọc<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="details.aspx?groupid=11">VNPT Net</a></li>
+            <li><a href="details.aspx?groupid=12">VNPT Vinaphone</a></li>
+            <li><a href="details.aspx?groupid=13">VNPT Media</a></li>
+              <li><a href="details.aspx?groupid=14">VNPT Media</a></li>
+          </ul>
+        </li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TTKD VNPT Tỉnh/TP<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="details.aspx?groupid=8">Miền Bắc</a></li>
+            <li><a href="details.aspx?groupid=9">Miền Nam</a></li>
+            <li><a href="details.aspx?groupid=10">Miền Trung</a></li>
+          </ul>
+        </li>
         <li><a href="NSurveyAdmin/VNPTGroupReport.aspx">Báo cáo</a></li>
         <li><a href="NSurveyAdmin/SurveyList.aspx">Quản trị</a></li>
       </ul>

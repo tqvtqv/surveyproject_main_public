@@ -551,3 +551,7 @@ D:\GitHub\SurveyWAP\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
 D:\GitHub\SurveyWAP\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
 D:\GitHub\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.dll
 D:\GitHub\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.pdb
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.details.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.SurveyGroup.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.UserControls.GroupManager.resources
+D:\Work\Projects\surveyproject\SurveyWAP\obj\Debug\Votations.NSurvey.WebAdmin.UserControls.SurveyGroupControl.resources

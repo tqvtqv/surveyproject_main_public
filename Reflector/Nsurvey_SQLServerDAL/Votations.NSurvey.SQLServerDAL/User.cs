@@ -196,7 +196,7 @@ namespace Votations.NSurvey.SQLServerDAL
             SqlCommand command = new SqlCommand();
             if (grouprow["ParentId"] != null)
             {
-                command.CommandText = "Insert Into vts_tbGroup (GroupName, ParentId) Values(@ParentId,@ParentId)";
+                command.CommandText = "Insert Into vts_tbGroup (GroupName, ParentId) Values(@GroupName,@ParentId)";
                 command.Parameters.AddWithValue("@GroupName", grouprow["GroupName"]);
                 command.Parameters.AddWithValue("@ParentId", grouprow["ParentId"]);
             }
